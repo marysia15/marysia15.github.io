@@ -1,0 +1,36 @@
+
+# macOS
+.DS_Store
+
+# Editors / IDEs
+.vscode/
+.idea/
+*.swp
+
+# Node / tooling (even if not used in v1, safe to ignore)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Env / secrets (never commit)
+.env
+.env.*
+*.key
+*.pem
+
+# OS / misc
+Thumbs.db
+
+# Build artifacts (if you ever add a build step later)
+dist/
+build/
+out/
+.cache/
+
+# AI
+
+CLAUDE.md 
+AGENTS.md
+PROJECT_BRIEF.md
