@@ -75,3 +75,8 @@ We use Playwright for browser-level checks in CI.
 ## GitHub Pages constraints
 - Everything must work as static hosting (no server-side assumptions).
 - Use relative paths that behave correctly under a GitHub Pages base path.
+
+## What you work on - big picture
+
+You are building a project specified in PRD.md 
+Please always before executing the task know what you are building and understand the PRD.md.
