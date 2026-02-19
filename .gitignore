@@ -29,10 +29,3 @@ dist/
 build/
 out/
 .cache/
-
-# AI
-
-CLAUDE.md 
-AGENTS.md
-PRD.md
-tasks/*
