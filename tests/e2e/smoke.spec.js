@@ -27,10 +27,25 @@ test.describe("Homepage smoke", () => {
   test("renders key action links and copy controls", async ({ page }) => {
     await page.goto("/");
 
+    await expect(page.getByTestId("hero-image")).toBeVisible();
     await expect(page.getByTestId("copy-krs")).toBeVisible();
     await expect(page.getByTestId("copy-cel")).toBeVisible();
-    await expect(page.getByTestId("cta-how-to")).toBeVisible();
+    await expect(page.getByTestId("cta-to-pit")).toBeVisible();
     await expect(page.getByTestId("cta-foundation")).toBeVisible();
+  });
+
+  test("hero CTA scrolls to PIT data card", async ({ page }) => {
+    await page.goto("/");
+
+    const initialY = await page.evaluate(() => globalThis.scrollY);
+
+    await page.getByTestId("cta-to-pit").click();
+
+    await expect(page).toHaveURL(/#dane-do-pit$/);
+
+    const finalY = await page.evaluate(() => globalThis.scrollY);
+    expect(finalY).toBeGreaterThan(initialY);
+    await expect(page.locator("#dane-do-pit")).toBeVisible();
   });
 
   test("has no runtime errors in console", async ({ page }) => {

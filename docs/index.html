@@ -32,16 +32,35 @@
     <main>
       <section class="hero">
         <div class="container">
-          <h1>Przekaż 1,5% podatku dla Marysi Wywiał</h1>
-          <p class="intro">
-            Jestem Adrianna, mama Marysi. Moja córka każdego dnia walczy o zdrowie i sprawność.
-            Twoje 1,5% podatku trafia do niej bezpośrednio przez fundację — nie kosztuje Cię to ani
-            złotówki więcej, a dla nas zmienia wszystko.
-          </p>
+          <div class="hero-layout">
+            <figure class="hero-media">
+              <img
+                src="assets/hero.jpg"
+                width="800"
+                height="600"
+                alt="Uśmiechnięta Marysia podczas codziennej aktywności"
+                data-testid="hero-image"
+              />
+            </figure>
+            <div class="hero-content">
+              <h1>Przekaż 1,5% podatku dla Marysi Wywiał</h1>
+              <p class="intro">
+                Jestem Adrianna, mama Marysi. Każdy dzień to dla nas praca nad zdrowiem i
+                samodzielnością, ale też zwykłe chwile radości, o które bardzo walczymy. Dziękuję,
+                że jesteś z nami.
+              </p>
+              <p class="trust-line">
+                To nic nie kosztuje - przekazujesz część podatku, który i tak płacisz.
+              </p>
+              <a href="#dane-do-pit" class="btn btn-primary hero-cta" data-testid="cta-to-pit"
+                >Przejdź do danych do PIT</a
+              >
+            </div>
+          </div>
         </div>
       </section>
 
-      <section class="donation-block" aria-label="Dane do rozliczenia PIT">
+      <section class="donation-block" id="dane-do-pit" aria-label="Dane do rozliczenia PIT">
         <div class="container">
           <div class="donation-card">
             <h2>Dane do PIT</h2>
@@ -83,9 +102,6 @@
 
       <section class="cta-section">
         <div class="container">
-          <a href="/jak-przekazac-15" class="btn btn-primary" data-testid="cta-how-to"
-            >Jak przekazać 1,5% w Twój e-PIT</a
-          >
           <a
             href="http://kawalek-nieba.pl/marysia-wywial/"
             class="btn btn-secondary"
