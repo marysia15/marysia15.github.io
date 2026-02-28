@@ -39,123 +39,287 @@ Tasks are grouped into phases. Within a phase, tasks can often run in parallel.
 
 ---
 
-## Phase 1 — Core pages (can run in parallel after Phase 0)
+## Phase 1 — Excellent landing page (single-page site, all sections on `/`)
 
-### 005 — Add shared navigation and footer
-- **Scope:** Add `<nav>` to `docs/index.html` with links to all planned pages; add `<footer>` with foundation link and copyright
-- **Delivers:** Consistent site-wide navigation (will link to pages as they're created)
+**Design philosophy:** This is a one-page donation site. Most visitors arrive from a Facebook link on their phone. They need to copy the KRS and cel szczegółowy in under 30 seconds — or read more to build trust. Every section must earn its place by either converting or building confidence. No separate pages until Phase 2; everything lives on the single landing page.
+
+**Visual tone:** Warm, calm, credible. "Mama do ludzi" — a parent speaking honestly. No corporate design, no aggressive colors. Generous whitespace, readable typography, authentic photos.
+
+### 005 — Hero section with photo and "it costs you nothing" message
+- **Scope:** Redesign the hero section of `docs/index.html`
+- **Delivers:**
+  - Hero photo placeholder (`docs/assets/hero.jpg`, 800×600, shows Marysia smiling / engaged in activity — **placeholder image with descriptive alt text until real photo is provided**)
+  - Warm H1: "Przekaż 1,5% podatku dla Marysi" (keep existing)
+  - 2–3 sentence intro from Adrianna (mama voice, already exists — refine)
+  - Prominent "To nic nie kosztuje" trust line below the intro — the single most effective conversion argument in Polish 1.5% campaigns
+  - Primary CTA button scrolling to the PIT data card (`#dane-do-pit`)
+- **Photo guidance (for real photos later):** Authentic, warm, showing the child's personality — not a medical/hospital photo. Natural lighting, vertical or square format for mobile. Max 150 KB optimized.
 - **Depends on:** 001
-- **Acceptance:** Nav renders on mobile (hamburger or stacked), links are present, no console errors
+- **Acceptance:** Hero renders on mobile with placeholder image, alt text present, CTA scrolls to donation card, no console errors
 
-### 006 — Create /jak-przekazac-15 page (how to give 1.5%)
-- **Scope:** Create `docs/jak-przekazac-15/index.html` with step-by-step Twój e-PIT instructions
-- **Delivers:** Clear numbered steps consistent with official guidance, filing window dates, reminder about cel szczegółowy
-- **Depends on:** 005 (shared nav/footer)
-- **Acceptance:** Page loads, steps are readable on mobile, nav works, no console errors
+### 006 — Sticky mobile CTA bar
+- **Scope:** Add a fixed-position bar at the bottom of the viewport on mobile (<640px)
+- **Delivers:**
+  - Compact bar with "Kopiuj KRS" button always visible while scrolling
+  - Disappears when the PIT data card is already in viewport (optional: IntersectionObserver)
+  - Accessible: doesn't obscure page content, has visible focus state
+- **Design reference:** Common pattern on Polish donation pages (Cancer Fighters, Zobacz Mnie)
+- **Depends on:** 005
+- **Acceptance:** Bar appears on mobile, copies KRS on tap, feedback shown, bar hides near donation card
 
-### 007 — Create /historia page (Marysia's story)
-- **Scope:** Create `docs/historia/index.html` with structured story content
-- **Delivers:** Longer narrative about Marysia, warm tone, photo placeholders with alt text
-- **Depends on:** 005 (shared nav/footer)
-- **Acceptance:** Page loads, headings are semantic, images have alt text
+### 007 — "Jak przekazać 1,5%" how-to section (on-page)
+- **Scope:** Add an inline section to `docs/index.html` below the donation card
+- **Delivers:**
+  - Section heading: "Jak przekazać 1,5% — 3 proste kroki"
+  - Three numbered steps with icon placeholders (numbered circles or simple SVG icons):
+    1. Wejdź na **Twój e-PIT** (link to podatki.gov.pl login)
+    2. Wpisz **KRS 0000382243** (with inline copy button)
+    3. Wpisz **cel szczegółowy: 1884 pomoc dla Marysi Wywiał** (with inline copy button)
+  - Filing window badge: "Rozlicz do 30 kwietnia 2026"
+  - Alternative mention: "Możesz też przekazać 1,5% przez PITax.pl lub formularz papierowy"
+  - Anchor: `#jak-przekazac`
+- **Content accuracy:** Steps must align with official podatki.gov.pl guidance. Do not invent UI screenshots.
+- **Depends on:** 005
+- **Acceptance:** Section renders, copy buttons work, link to Twój e-PIT correct, steps are accurate
 
-### 008 — Create /faq page
-- **Scope:** Create `docs/faq/index.html` with FAQ content in Polish
-- **Delivers:** Frequently asked questions with JSON-LD `FAQPage` structured data
-- **Depends on:** 005 (shared nav/footer)
-- **Acceptance:** Page loads, JSON-LD is valid, questions/answers are accurate
+### 008 — Marysia's story section (on-page)
+- **Scope:** Add a story section to `docs/index.html`
+- **Delivers:**
+  - Section heading: "Historia Marysi" or "O Marysi"
+  - 3–5 short paragraphs, written in parent's voice (Adrianna):
+    - Who Marysia is (age, personality, what she loves)
+    - What she faces daily (medical needs, described respectfully — no invented details)
+    - What the funds cover (therapy, rehabilitation, equipment — be specific where possible)
+    - What has changed thanks to previous support (if applicable)
+  - 2–3 photo placeholders with meaningful Polish alt text:
+    - `docs/assets/story-1.jpg` — placeholder for daily life / therapy photo
+    - `docs/assets/story-2.jpg` — placeholder for progress / activity photo
+  - Anchor: `#historia`
+- **Content guardrails:** Do not invent medical details, dates, or numbers not provided in `story.md` or by the user. Use placeholder copy marked `<!-- REPLACE: ... -->` for facts to be verified.
+- **Depends on:** 005
+- **Acceptance:** Section renders, images have alt text, no invented medical facts, semantic headings
 
-### 009 — Create /dla-ksiegowych page (accountant pack)
-- **Scope:** Create `docs/dla-ksiegowych/index.html` with download links and copy-paste email/post templates
-- **Delivers:** Accountant-friendly page with PDF placeholder, image placeholders, email template copy block
-- **Depends on:** 005 (shared nav/footer)
-- **Acceptance:** Page loads, copy blocks work, download links point to correct paths
+### 009 — FAQ section with JSON-LD (on-page)
+- **Scope:** Add an FAQ accordion/section to `docs/index.html`
+- **Delivers:**
+  - Section heading: "Najczęściej zadawane pytania"
+  - 5–7 questions addressing Polish donor concerns (based on top-performing 1.5% pages):
+    1. "Czy przekazanie 1,5% mnie coś kosztuje?" → No, it's redirected from tax you already owe.
+    2. "Kto może przekazać 1,5%?" → Any Polish taxpayer filing PIT.
+    3. "Czy cała kwota trafia do Marysi?" → Yes, 100% goes to her subaccount at the foundation.
+    4. "Do kiedy mogę rozliczyć PIT?" → 30 April 2026 for PIT-37/PIT-38.
+    5. "Jak sprawdzić, czy mój 1,5% dotarł?" → Contact the foundation or check on the foundation page.
+    6. "Co jeśli nie rozliczam się samodzielnie?" → Your accountant can wpisać KRS and cel — share this page with them.
+    7. "Czy mogę też wpłacić darowiznę przelewem?" → Yes, see bank transfer section below.
+  - `FAQPage` JSON-LD in `<script type="application/ld+json">`
+  - Simple expand/collapse with CSS + minimal JS (no framework), or always-visible list
+  - Anchor: `#faq`
+- **SEO value:** FAQ structured data drives rich snippets in Google for "1.5% podatku" queries
+- **Depends on:** 005
+- **Acceptance:** FAQ renders, JSON-LD validates (Google Rich Results Test), answers are factually correct
+
+### 010 — Bank transfer section (on-page)
+- **Scope:** Add a secondary donation section below the FAQ
+- **Delivers:**
+  - Section heading: "Wpłata przelewem" or "Pomóż też przelewem"
+  - Framing: "Jeśli chcesz pomóc dodatkowo, poza 1,5% podatku"
+  - Polish bank account number with copy button (placeholder `<!-- REPLACE: account number -->`)
+  - Foreign transfer details: IBAN, SWIFT/BIC (placeholder)
+  - Anchor: `#przelew`
+- **Depends on:** 005
+- **Acceptance:** Section renders, copy button works, placeholder values clearly marked for replacement
+
+### 011 — Facebook updates links section (on-page)
+- **Scope:** Add a curated links section pointing to Facebook posts
+- **Delivers:**
+  - Section heading: "Aktualności" or "Śledź postępy Marysi"
+  - 3–5 curated links to Facebook posts from "Marysia na przekór diagnozom" (placeholder URLs marked `<!-- REPLACE: FB post URL -->`)
+  - Each link: short description (1 line) + date
+  - Note: No embedded Facebook widgets (performance + clutter per CLAUDE.md). Plain links only.
+  - Anchor: `#aktualnosci`
+- **Depends on:** 005
+- **Acceptance:** Links section renders, no FB embeds, placeholders clearly marked
+
+### 012 — Trust signals and enriched footer
+- **Scope:** Enhance trust signals throughout the page and redesign the footer
+- **Delivers:**
+  - Trust bar near the donation card: "100% wpłat trafia na subkonto Marysi" + OPP badge text
+  - Foundation details in footer:
+    - Full name: Fundacja Kawałek Nieba
+    - KRS: 0000382243 (repeated — intentional, per best-practice research)
+    - OPP status mention
+    - Link to foundation page
+    - Link to Facebook page
+  - Filing deadline badge (if not already prominent enough)
+  - Previous year results line (placeholder: `<!-- REPLACE: last year amount -->`)
+- **Depends on:** 005
+- **Acceptance:** Trust signals visible, footer has all required info, KRS repeated at least 3× on page
+
+### 013 — Smooth-scroll navigation and section anchors
+- **Scope:** Add a minimal in-page navigation and stable anchors
+- **Delivers:**
+  - Compact nav bar (not hamburger — just 3–4 text links for a one-page site):
+    - "Dane do PIT" → `#dane-do-pit`
+    - "Jak przekazać" → `#jak-przekazac`
+    - "Historia" → `#historia`
+    - "FAQ" → `#faq`
+  - Smooth scroll behavior via `scroll-behavior: smooth` (CSS) or minimal JS fallback
+  - All anchors stable and documented in SITEMAP.md
+- **Depends on:** 007, 008, 009 (sections must exist)
+- **Acceptance:** Nav links scroll to correct sections, anchors work as direct URLs, mobile nav is usable
+
+### 014 — OG image placeholder and social meta
+- **Scope:** Create OG image placeholder and ensure all social sharing meta is correct
+- **Delivers:**
+  - `docs/assets/og-image.jpg` — placeholder 1200×630 image (can be a solid color with text overlay: "Przekaż 1,5% podatku dla Marysi — KRS 0000382243")
+  - **Photo guidance for real OG image:** Child's photo + KRS number + "Przekaż 1,5% podatku" text overlay. This is the image people see when sharing on Facebook/WhatsApp.
+  - Verify all OG tags in `<head>` point to the correct image and URL
+  - Add `og:locale` = `pl_PL`
+- **Depends on:** 005
+- **Acceptance:** OG image file exists, meta tags reference it correctly, Facebook Sharing Debugger shows clean preview
+
+### 015 — JSON-LD WebSite structured data
+- **Scope:** Add `WebSite` JSON-LD schema to the homepage `<head>`
+- **Delivers:**
+  - `WebSite` schema with name, URL, and description
+  - Complements the `FAQPage` JSON-LD from task 009
+- **Depends on:** 009 (FAQPage JSON-LD already in place)
+- **Acceptance:** JSON-LD validates with Google Rich Results Test
 
 ---
 
-## Phase 2 — SEO, structured data, and polish (can run in parallel)
+## Phase 2 — Secondary pages and accountant pack
 
-### 010 — Add JSON-LD structured data (WebSite + FAQPage)
-- **Scope:** Add `WebSite` JSON-LD to homepage, ensure `FAQPage` JSON-LD on /faq
-- **Delivers:** Rich search result eligibility
-- **Depends on:** 001, 008
-- **Acceptance:** JSON-LD validates with Google Rich Results Test
+### 016 — Create /jak-przekazac-15 standalone page
+- **Scope:** Create `docs/jak-przekazac-15/index.html` — expanded version of the on-page how-to
+- **Delivers:** Detailed step-by-step for Twój e-PIT, PITax.pl, and paper PIT form. Useful as a shareable deep link for accountants and friends.
+- **Depends on:** Phase 1 complete
+- **Acceptance:** Page loads, steps accurate, links back to homepage, SEO meta present
 
-### 011 — Create OG image and add to all pages
-- **Scope:** Create a shareable OG image (`docs/assets/og-image.jpg`), update all pages' OG meta tags
-- **Delivers:** Clean link previews on Facebook/Instagram/WhatsApp
-- **Depends on:** 006, 007, 008, 009 (all pages exist)
-- **Acceptance:** OG image loads, preview looks correct in Facebook Sharing Debugger
+### 017 — Create /dla-ksiegowych page (accountant pack)
+- **Scope:** Create `docs/dla-ksiegowych/index.html` with downloads and copy-paste templates
+- **Delivers:**
+  - 30-second explanation: "Gotowy pakiet do wysłania klientom"
+  - PDF placeholder (`docs/assets/pack/ksiegowi.pdf`)
+  - Social image placeholders (`docs/assets/pack/post-square.png`, `docs/assets/pack/story-vertical.png`)
+  - Copy-paste email template for accountants to send clients
+  - Copy-paste short social post template
+- **Depends on:** Phase 1 complete
+- **Acceptance:** Page loads, copy blocks work, download links point to correct paths
 
-### 012 — Update sitemap.xml with all pages
-- **Scope:** Update `docs/sitemap.xml` to include all created pages
-- **Depends on:** 006, 007, 008, 009
+### 018 — Create accountant assets (PDF + social images)
+- **Scope:** Produce final versions of `ksiegowi.pdf`, `post-square.png`, `story-vertical.png`
+- **Delivers:** Print-ready PDF and social-ready images with KRS, cel, and photo
+- **Depends on:** 017
+- **Acceptance:** Files exist, are under 500 KB each, and linked correctly from /dla-ksiegowych
+
+### 019 — Update sitemap.xml with all pages
+- **Scope:** Update `docs/sitemap.xml` to include `/jak-przekazac-15` and `/dla-ksiegowych`
+- **Depends on:** 016, 017
 - **Acceptance:** sitemap.xml lists all pages with correct URLs
-
-### 013 — Create accountant assets (PDF + social images)
-- **Scope:** Create `docs/assets/pack/ksiegowi.pdf`, `docs/assets/pack/post-square.png`, `docs/assets/pack/story-vertical.png` (or placeholders)
-- **Delivers:** Downloadable assets for accountants
-- **Depends on:** 009
-- **Acceptance:** Files exist and are linked correctly from /dla-ksiegowych
 
 ---
 
 ## Phase 3 — Testing, accessibility, and performance
 
-### 014 — Add Playwright tests for all pages
-- **Scope:** Create test files for each page: navigation, content presence, copy buttons, download links
-- **Delivers:** Full E2E test coverage
-- **Depends on:** 004, 006, 007, 008, 009
+### 020 — Expand Playwright tests for landing page sections
+- **Scope:** Add E2E tests covering all Phase 1 sections: hero, how-to steps, story, FAQ accordion, bank transfer, sticky CTA, in-page navigation
+- **Delivers:** Full E2E coverage of the single-page landing
+- **Depends on:** 004, Phase 1 complete
+- **Acceptance:** `npm run test:e2e` passes for all sections
+
+### 021 — Add Playwright tests for secondary pages
+- **Scope:** Tests for /jak-przekazac-15 and /dla-ksiegowych: navigation, content, copy buttons, download links
+- **Delivers:** E2E coverage beyond the homepage
+- **Depends on:** 016, 017, 020
 - **Acceptance:** `npm run test:e2e` passes for all pages
 
-### 015 — Accessibility audit and fixes
-- **Scope:** Run axe-core or Lighthouse accessibility audit, fix any issues (focus states, contrast, alt text, ARIA)
+### 022 — Accessibility audit and fixes
+- **Scope:** Run axe-core or Lighthouse accessibility audit, fix any issues (focus states, contrast, alt text, ARIA, skip links)
 - **Delivers:** Accessible site meeting WCAG 2.1 AA basics
-- **Depends on:** all pages created
+- **Depends on:** Phase 1 + Phase 2 complete
 - **Acceptance:** Lighthouse Accessibility ≥ 90
 
-### 016 — Performance optimization
-- **Scope:** Optimize images (WebP), minify CSS if needed, check Lighthouse Performance
-- **Delivers:** Fast-loading site on mobile
-- **Depends on:** all pages created
-- **Acceptance:** Lighthouse Performance ≥ 90 on mobile
+### 023 — Performance optimization (images, lazy loading)
+- **Scope:** Optimize all images (WebP with JPEG fallback), add lazy loading below the fold, verify total page weight < 500 KB
+- **Delivers:** Fast-loading site on mobile cellular connections
+- **Depends on:** Phase 1 + Phase 2 complete
+- **Acceptance:** Lighthouse Performance ≥ 90 on mobile, First Contentful Paint < 1s
 
 ---
 
 ## Phase 4 — English and extras (lower priority)
 
-### 017 — Create /en page (minimal English info)
+### 024 — Create /en page (minimal English info)
 - **Scope:** Create `docs/en/index.html` with basic English summary of the donation flow
 - **Delivers:** English-language entry point for non-Polish speakers
-- **Depends on:** 005
-- **Acceptance:** Page loads, content is in English, nav works
+- **Depends on:** Phase 1 complete
+- **Acceptance:** Page loads, content is in English, links work
 
-### 018 — Add UTM parameter templates for share links
-- **Scope:** Document UTM link templates in a markdown file or add them as data attributes on share buttons
-- **Delivers:** Trackable links for Facebook, Instagram, email sharing
-- **Depends on:** 001
-- **Acceptance:** UTM parameters are documented and consistent
+### 025 — Add UTM parameter templates for share links
+- **Scope:** Document UTM link templates and add them as data attributes on share/CTA buttons
+- **Delivers:** Trackable links for Facebook, Instagram, email sharing (utm_source, utm_medium, utm_campaign=pit_2026)
+- **Depends on:** Phase 1 complete
+- **Acceptance:** UTM parameters are documented and consistently applied
+
+---
+
+## Photo checklist (for Phase 1 — replace placeholders with real photos)
+
+All photo slots are implemented as placeholders in Phase 1. Before launch, replace with real photos:
+
+| Slot | File path | Dimensions | Purpose | Guidance |
+|------|-----------|-----------|---------|----------|
+| Hero | `docs/assets/hero.jpg` | 800×600 (landscape) | Above the fold, first impression | Marysia smiling or engaged in activity. Warm, natural light. Shows personality, not diagnosis. |
+| Story 1 | `docs/assets/story-1.jpg` | 600×400 | Daily life / therapy | Candid moment: therapy session, playing, learning |
+| Story 2 | `docs/assets/story-2.jpg` | 600×400 | Progress / activity | Shows growth or a happy moment |
+| OG image | `docs/assets/og-image.jpg` | 1200×630 | Facebook/WhatsApp link preview | Marysia's photo + "Przekaż 1,5% podatku" + KRS number overlay |
+
+**General photo rules:**
+- Authentic, not stock. Show the child, not the disease.
+- Max 150 KB per image after optimization (WebP preferred, JPEG fallback).
+- Meaningful Polish alt text describing the photo.
+- Vertical or square crops work best for mobile hero.
 
 ---
 
 ## Task dependency graph (summary)
 
 ```
+Phase 0 (done):
 001 ──┬── 002
       ├── 003 ── 004
-      ├── 005 ──┬── 006 ──┐
-      │         ├── 007 ──┤
-      │         ├── 008 ──┼── 010, 011, 012, 014, 015, 016
-      │         ├── 009 ──┼── 013
-      │         └── 017   │
-      └── 018              │
+      │
+Phase 1 (landing page):
+      └── 005 ──┬── 006 (sticky CTA)
+                ├── 007 (how-to section)
+                ├── 008 (story section)
+                ├── 009 (FAQ + JSON-LD)
+                ├── 010 (bank transfer)
+                ├── 011 (FB links)
+                ├── 012 (trust + footer)
+                ├── 014 (OG image)
+                ├── 015 (WebSite JSON-LD)
+                └── 013 (nav + anchors) ── depends on 007–009
+
+Phase 2 (secondary pages):
+  016, 017 ── 018, 019
+
+Phase 3 (quality):
+  020 ── 021 ── 022, 023
+
+Phase 4 (extras):
+  024, 025
 ```
 
 ---
 
 ## Execution notes
 
-- **Codex starts with:** `tasks/001-scaffold-homepage.md`
-- **Parallel tracks after Phase 0:** Pages 006–009 can be built in parallel by separate Codex agents
-- **Each task = one PR** — keep diffs small and reviewable
-- **Claude Code reviews** each PR for tone, accuracy, and SEO compliance before merge
+- **Phase 0 is complete.** All foundation tasks (001–004) are done.
+- **Phase 1 is the priority.** Build the full single-page landing before any secondary pages.
+- **Parallel tracks in Phase 1:** Tasks 005–012 can mostly run in parallel (005 first, then the rest). Task 013 (nav) depends on sections existing.
+- **Each task = one PR** — keep diffs small and reviewable.
+- **Placeholder policy:** Use `<!-- REPLACE: description -->` HTML comments for content that needs real data (bank account, FB post URLs, last-year amounts). This makes it easy to search and replace before launch.
+- **Photo placeholders:** Use solid-color images with descriptive text until real photos are provided. Never use stock photos.
+- **Claude Code reviews** each PR for tone, accuracy, SEO compliance, and mobile usability before merge.
