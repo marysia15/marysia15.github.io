@@ -6,7 +6,7 @@
     <title>1,5% podatku dla Marysi — Marysia Wywiał — KRS 0000382243</title>
     <meta
       name="description"
-      content="Przekaż 1,5% swojego podatku PIT dla Marysi Wywiał. KRS 0000382243, cel szczegółowy: 1884 pomoc dla Marysi Wywiał. Sprawdź jak to zrobić w Twój e-PIT."
+      content="Przekaż 1,5% swojego podatku PIT dla Marysi Wywiał. KRS 0000382243, cel szczegółowy: 1884 pomoc dla Marysi Wywiał. To nic nie kosztuje — sprawdź jak to zrobić w Twój e-PIT."
     />
     <link rel="canonical" href="https://marysia15.github.io/" />
 
@@ -19,17 +19,26 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://marysia15.github.io/" />
     <meta property="og:image" content="https://marysia15.github.io/assets/og-image.jpg" />
+    <meta property="og:locale" content="pl_PL" />
 
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <header class="site-header">
-      <div class="container">
-        <p class="site-name">Marysia Wywiał — 1,5% podatku</p>
+    <!-- Navigation -->
+    <nav class="site-nav" aria-label="Nawigacja główna">
+      <div class="container nav-inner">
+        <a href="#" class="nav-brand">Marysia Wywiał — 1,5%</a>
+        <ul class="nav-links">
+          <li><a href="#dane-do-pit">Dane do PIT</a></li>
+          <li><a href="#jak-przekazac">Jak przekazać</a></li>
+          <li><a href="#historia">O Marysi</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
       </div>
-    </header>
+    </nav>
 
     <main>
+      <!-- ═══ Hero ═══ -->
       <section class="hero">
         <div class="container">
           <div class="hero-layout">
@@ -45,12 +54,11 @@
             <div class="hero-content">
               <h1>Przekaż 1,5% podatku dla Marysi Wywiał</h1>
               <p class="intro">
-                Jestem Adrianna, mama Marysi. Każdy dzień to dla nas praca nad zdrowiem i
-                samodzielnością, ale też zwykłe chwile radości, o które bardzo walczymy. Dziękuję,
-                że jesteś z nami.
+                Jestem Adrianna, mama Marysi. Każdego dnia pracujemy nad zdrowiem i samodzielnością
+                Marysi, ale też walczymy o zwykłe chwile radości. Dziękuję, że jesteś z nami.
               </p>
               <p class="trust-line">
-                To nic nie kosztuje - przekazujesz część podatku, który i tak płacisz.
+                To nic nie kosztuje — przekazujesz część podatku, który i tak płacisz
               </p>
               <a href="#dane-do-pit" class="btn btn-primary hero-cta" data-testid="cta-to-pit"
                 >Przejdź do danych do PIT</a
@@ -60,12 +68,14 @@
         </div>
       </section>
 
-      <section class="donation-block" id="dane-do-pit" aria-label="Dane do rozliczenia PIT">
+      <!-- ═══ Donation Card ═══ -->
+      <section class="pit-data" id="dane-do-pit" aria-label="Dane do rozliczenia PIT">
         <div class="container">
           <div class="donation-card">
             <h2>Dane do PIT</h2>
             <p class="donation-instruction">
-              Wpisz KRS i cel szczegółowy w rozliczeniu PIT / Twój e-PIT.
+              Wpisz poniższe dane w rozliczeniu PIT lub na stronie
+              <strong>Twój e-PIT</strong>.
             </p>
 
             <div class="donation-row">
@@ -95,29 +105,306 @@
               </button>
             </div>
 
+            <div class="donation-trust">
+              100% wpłat trafia na subkonto Marysi w Fundacji Kawałek Nieba
+            </div>
             <p class="filing-window">Rozliczenie PIT: 15 lutego – 30 kwietnia 2026</p>
+          </div>
+
+          <div class="section-cta">
+            <a
+              href="http://kawalek-nieba.pl/marysia-wywial/"
+              class="btn btn-secondary"
+              rel="noopener"
+              data-testid="cta-foundation"
+              >Przejdź do subkonta fundacji</a
+            >
           </div>
         </div>
       </section>
 
-      <section class="cta-section">
+      <!-- ═══ How-to Steps (task 007 — placeholder content) ═══ -->
+      <section class="how-to" id="jak-przekazac" aria-label="Jak przekazać 1,5%">
         <div class="container">
-          <a
-            href="http://kawalek-nieba.pl/marysia-wywial/"
-            class="btn btn-secondary"
-            rel="noopener"
-            data-testid="cta-foundation"
-            >Przejdź do subkonta fundacji</a
-          >
+          <div class="section-heading">
+            <h2>Jak przekazać 1,5% — 3 proste kroki</h2>
+            <p>Zajmuje to dosłownie minutę. Możesz to zrobić teraz.</p>
+          </div>
+
+          <div class="steps">
+            <div class="step">
+              <div class="step-number">1</div>
+              <div class="step-content">
+                <h3>Wejdź na Twój e-PIT</h3>
+                <p>
+                  Zaloguj się na
+                  <a
+                    href="https://www.podatki.gov.pl/pit/twoj-e-pit/"
+                    target="_blank"
+                    rel="noopener"
+                    >podatki.gov.pl</a
+                  >
+                  profilem zaufanym, e-dowodem lub danymi podatkowymi.
+                </p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-number">2</div>
+              <div class="step-content">
+                <h3>
+                  Wpisz KRS
+                  <strong>0000382243</strong>
+                  <button class="copy-btn" data-copy="0000382243" type="button">Kopiuj</button>
+                </h3>
+                <p>W sekcji przekazania 1,5% podatku wpisz numer KRS organizacji.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-number">3</div>
+              <div class="step-content">
+                <h3>
+                  Wpisz cel szczegółowy
+                  <button class="copy-btn" data-copy="1884 pomoc dla Marysi Wywiał" type="button">
+                    Kopiuj
+                  </button>
+                </h3>
+                <p>
+                  <strong>1884 pomoc dla Marysi Wywiał</strong>
+                  — dzięki temu 100% trafi na subkonto Marysi.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="section-cta">
+            <span class="how-to-deadline">Rozlicz do 30 kwietnia 2026</span>
+          </div>
+          <p class="how-to-note">
+            Możesz też przekazać 1,5% przez
+            <strong>PITax.pl</strong>, program do rozliczeń lub formularz papierowy.
+          </p>
+        </div>
+      </section>
+
+      <!-- ═══ Story (task 008 — placeholder content) ═══ -->
+      <section class="story" id="historia" aria-label="Historia Marysi">
+        <div class="container">
+          <div class="section-heading">
+            <h2>O Marysi</h2>
+          </div>
+
+          <div class="story-grid">
+            <div class="story-text">
+              <!-- REPLACE: Story content to be written by Adrianna / verified with family -->
+              <p>
+                Marysia jest dzielną, uśmiechniętą dziewczynką, która każdego dnia udowadnia, że
+                radość nie zna barier. Uwielbia muzykę, kontakt z ludźmi i każdy mały sukces
+                traktuje jak wielkie zwycięstwo.
+              </p>
+              <p>
+                Na co dzień Marysia potrzebuje regularnej rehabilitacji i terapii, które pomagają
+                jej w rozwoju i codziennym funkcjonowaniu. Każdy postęp — nawet najmniejszy — to
+                efekt systematycznej pracy i ogromnej determinacji.
+              </p>
+              <p>
+                Zebrane środki z 1,5% podatku pokrywają koszty rehabilitacji, terapii i
+                specjalistycznego sprzętu, które są niezbędne w codziennym życiu Marysi.
+              </p>
+              <!-- END REPLACE -->
+            </div>
+            <div class="story-photos">
+              <figure class="story-photo">
+                <img
+                  src="assets/story-1.jpg"
+                  width="600"
+                  height="400"
+                  alt="Marysia podczas codziennej aktywności"
+                  loading="lazy"
+                />
+              </figure>
+              <figure class="story-photo">
+                <img
+                  src="assets/story-2.jpg"
+                  width="600"
+                  height="400"
+                  alt="Marysia podczas zabawy"
+                  loading="lazy"
+                />
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ FAQ (task 009 — placeholder content) ═══ -->
+      <section class="faq" id="faq" aria-label="Najczęściej zadawane pytania">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Najczęściej zadawane pytania</h2>
+          </div>
+
+          <div class="faq-list">
+            <details class="faq-item">
+              <summary>Czy przekazanie 1,5% mnie coś kosztuje?</summary>
+              <div class="faq-answer">
+                Nie. To część podatku, który i tak płacisz — po prostu decydujesz, że 1,5% trafi do
+                Marysi zamiast do budżetu państwa. Nie dopłacasz ani złotówki.
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>Kto może przekazać 1,5%?</summary>
+              <div class="faq-answer">
+                Każdy podatnik rozliczający PIT w Polsce — zarówno PIT-37 (umowa o pracę, zlecenie)
+                jak i PIT-38 (dochody kapitałowe).
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>Czy cała kwota trafia do Marysi?</summary>
+              <div class="faq-answer">
+                Tak. 100% przekazanej kwoty trafia na indywidualne subkonto Marysi w Fundacji
+                Kawałek Nieba. Fundacja nie pobiera prowizji z 1,5%.
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>Do kiedy mogę rozliczyć PIT?</summary>
+              <div class="faq-answer">
+                Termin rozliczenia PIT za 2025 rok upływa 30 kwietnia 2026. Jeśli nie złożysz
+                zeznania samodzielnie, Twój e-PIT zostanie zaakceptowany automatycznie — ale bez
+                przekazania 1,5%. Dlatego warto zalogować się i wpisać KRS przed tą datą.
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>Jak sprawdzić, czy mój 1,5% dotarł?</summary>
+              <div class="faq-answer">
+                Możesz skontaktować się bezpośrednio z Fundacją Kawałek Nieba lub sprawdzić
+                informacje na
+                <a href="http://kawalek-nieba.pl/marysia-wywial/" rel="noopener">stronie fundacji</a
+                >.
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>Co jeśli nie rozliczam się samodzielnie?</summary>
+              <div class="faq-answer">
+                Twój księgowy lub biuro rachunkowe może wpisać KRS i cel szczegółowy w Twoim imieniu
+                — wystarczy przesłać im tę stronę.
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>Czy mogę też wpłacić darowiznę przelewem?</summary>
+              <div class="faq-answer">
+                Tak! Oprócz 1,5% podatku możesz też pomóc Marysi wpłacając darowiznę bezpośrednio na
+                konto fundacji. Szczegóły znajdziesz w sekcji
+                <a href="#przelew">wpłata przelewem</a> poniżej.
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ Bank Transfer (task 010 — placeholder content) ═══ -->
+      <section class="bank" id="przelew" aria-label="Wpłata przelewem">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Pomóż też przelewem</h2>
+            <p>Jeśli chcesz wesprzeć Marysię dodatkowo, poza 1,5% podatku.</p>
+          </div>
+
+          <div class="bank-card">
+            <div class="bank-row">
+              <div class="donation-field">
+                <span class="donation-label">Numer konta (PLN)</span>
+                <!-- REPLACE: actual bank account number -->
+                <span class="donation-value">00 0000 0000 0000 0000 0000 0000</span>
+              </div>
+              <button class="copy-btn" data-copy="00 0000 0000 0000 0000 0000 0000" type="button">
+                Kopiuj
+              </button>
+            </div>
+
+            <div class="bank-row">
+              <div class="donation-field">
+                <span class="donation-label">Tytuł przelewu</span>
+                <span class="donation-value">1884 pomoc dla Marysi Wywiał</span>
+              </div>
+              <button class="copy-btn" data-copy="1884 pomoc dla Marysi Wywiał" type="button">
+                Kopiuj
+              </button>
+            </div>
+
+            <!-- REPLACE: add IBAN and SWIFT/BIC for foreign transfers -->
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ Updates / Facebook Links (task 011 — placeholder content) ═══ -->
+      <section class="updates" id="aktualnosci" aria-label="Aktualności">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Śledź postępy Marysi</h2>
+            <p>Najnowsze wiadomości z profilu „Marysia na przekór diagnozom"</p>
+          </div>
+
+          <div class="updates-list">
+            <!-- REPLACE: FB post URL and description -->
+            <a href="#" class="update-link" rel="noopener">
+              <span class="update-date">2026</span>
+              <span class="update-title"
+                >Aktualizacja wkrótce — śledź nasz profil na Facebooku</span
+              >
+            </a>
+            <!-- END REPLACE -->
+          </div>
+
+          <div class="section-cta">
+            <!-- REPLACE: actual Facebook page URL -->
+            <a href="#" class="btn btn-secondary" rel="noopener">Profil na Facebooku</a>
+          </div>
         </div>
       </section>
     </main>
 
+    <!-- ═══ Footer ═══ -->
     <footer class="site-footer">
       <div class="container">
-        <p>Fundacja Kawałek Nieba — KRS 0000382243</p>
+        <div class="footer-grid">
+          <div>
+            <p class="footer-brand">Fundacja Kawałek Nieba</p>
+            <p>Organizacja Pożytku Publicznego</p>
+            <span class="footer-krs">KRS 0000382243</span>
+          </div>
+          <div>
+            <ul class="footer-links">
+              <li>
+                <a href="http://kawalek-nieba.pl/marysia-wywial/" rel="noopener">Strona fundacji</a>
+              </li>
+              <!-- REPLACE: actual Facebook page URL -->
+              <li><a href="#" rel="noopener">Facebook</a></li>
+            </ul>
+          </div>
+          <div class="footer-copy">
+            <p>
+              <!-- REPLACE: last year amount -->
+              Strona stworzona z miłością, aby pomóc Marysi.
+            </p>
+          </div>
+        </div>
       </div>
     </footer>
+
+    <!-- ═══ Sticky Mobile CTA (task 006) ═══ -->
+    <section class="sticky-cta" aria-label="Szybkie kopiowanie KRS">
+      <div class="sticky-cta-inner">
+        <button class="btn btn-primary copy-btn" data-copy="0000382243" type="button">
+          Kopiuj KRS
+        </button>
+      </div>
+    </section>
 
     <script src="js/copy.js"></script>
   </body>

@@ -10,28 +10,28 @@ Tasks are grouped into phases. Within a phase, tasks can often run in parallel.
 
 ---
 
-## Phase 0 — Foundation (must be sequential)
+## Phase 0 — Foundation (must be sequential) ✅ COMPLETE
 
-### 001 — Scaffold homepage with donation block and SEO metadata
+### 001 — Scaffold homepage with donation block and SEO metadata ✅
 - **File:** `tasks/001-scaffold-homepage.md`
 - **Scope:** Create `docs/index.html`, `docs/css/style.css`, `docs/js/copy.js`
 - **Delivers:** A working homepage with H1, donation data block with copy buttons, SEO `<head>`, mobile-first layout, primary + secondary CTA
 - **Depends on:** nothing
 - **Acceptance:** Page loads on localhost, copy buttons work, HTML is valid, Lighthouse mobile ≥ 90
 
-### 002 — Add robots.txt and sitemap.xml
+### 002 — Add robots.txt and sitemap.xml ✅
 - **Scope:** Create `docs/robots.txt` and `docs/sitemap.xml`
 - **Delivers:** Basic SEO infrastructure pointing to canonical URL `https://marysia15.github.io/`
 - **Depends on:** 001 (need to know the canonical URL structure)
 - **Acceptance:** Both files are valid and reference the correct URLs
 
-### 003 — Set up dev tooling (npm scripts, Prettier, ESLint, Stylelint)
+### 003 — Set up dev tooling (npm scripts, Prettier, ESLint, Stylelint) ✅
 - **Scope:** Initialize `package.json`, add Prettier + ESLint + Stylelint configs, create npm scripts: `format:check`, `lint`
 - **Delivers:** Consistent code formatting and linting for all future tasks
 - **Depends on:** 001 (need files to lint)
 - **Acceptance:** `npm run format:check` and `npm run lint` pass on existing files
 
-### 004 — Set up Playwright and smoke tests
+### 004 — Set up Playwright and smoke tests ✅
 - **Scope:** Install Playwright, create `tests/e2e/smoke.spec.js` with homepage smoke tests
 - **Delivers:** Automated UI test suite: page loads, title correct, H1 present, no console errors, copy buttons exist
 - **Depends on:** 001, 003
@@ -39,13 +39,13 @@ Tasks are grouped into phases. Within a phase, tasks can often run in parallel.
 
 ---
 
-## Phase 1 — Excellent landing page (single-page site, all sections on `/`)
+## Phase 1 — Excellent landing page (single-page site, all sections on `/`) 🔄 IN PROGRESS
 
 **Design philosophy:** This is a one-page donation site. Most visitors arrive from a Facebook link on their phone. They need to copy the KRS and cel szczegółowy in under 30 seconds — or read more to build trust. Every section must earn its place by either converting or building confidence. No separate pages until Phase 2; everything lives on the single landing page.
 
 **Visual tone:** Warm, calm, credible. "Mama do ludzi" — a parent speaking honestly. No corporate design, no aggressive colors. Generous whitespace, readable typography, authentic photos.
 
-### 005 — Hero section with photo and "it costs you nothing" message
+### 005 — Hero section with photo and "it costs you nothing" message ✅
 - **Scope:** Redesign the hero section of `docs/index.html`
 - **Delivers:**
   - Hero photo placeholder (`docs/assets/hero.jpg`, 800×600, shows Marysia smiling / engaged in activity — **placeholder image with descriptive alt text until real photo is provided**)
@@ -57,7 +57,7 @@ Tasks are grouped into phases. Within a phase, tasks can often run in parallel.
 - **Depends on:** 001
 - **Acceptance:** Hero renders on mobile with placeholder image, alt text present, CTA scrolls to donation card, no console errors
 
-### 006 — Sticky mobile CTA bar
+### 006 — Sticky mobile CTA bar ✅
 - **Scope:** Add a fixed-position bar at the bottom of the viewport on mobile (<640px)
 - **Delivers:**
   - Compact bar with "Kopiuj KRS" button always visible while scrolling
@@ -67,7 +67,7 @@ Tasks are grouped into phases. Within a phase, tasks can often run in parallel.
 - **Depends on:** 005
 - **Acceptance:** Bar appears on mobile, copies KRS on tap, feedback shown, bar hides near donation card
 
-### 007 — "Jak przekazać 1,5%" how-to section (on-page)
+### 007 — "Jak przekazać 1,5%" how-to section (on-page) ✅
 - **Scope:** Add an inline section to `docs/index.html` below the donation card
 - **Delivers:**
   - Section heading: "Jak przekazać 1,5% — 3 proste kroki"
@@ -82,7 +82,7 @@ Tasks are grouped into phases. Within a phase, tasks can often run in parallel.
 - **Depends on:** 005
 - **Acceptance:** Section renders, copy buttons work, link to Twój e-PIT correct, steps are accurate
 
-### 008 — Marysia's story section (on-page)
+### 008 — Marysia's story section (on-page) ✅
 - **Scope:** Add a story section to `docs/index.html`
 - **Delivers:**
   - Section heading: "Historia Marysi" or "O Marysi"
@@ -99,7 +99,7 @@ Tasks are grouped into phases. Within a phase, tasks can often run in parallel.
 - **Depends on:** 005
 - **Acceptance:** Section renders, images have alt text, no invented medical facts, semantic headings
 
-### 009 — FAQ section with JSON-LD (on-page)
+### 009 — FAQ section with JSON-LD (on-page) ✅ (FAQ section done; JSON-LD pending)
 - **Scope:** Add an FAQ accordion/section to `docs/index.html`
 - **Delivers:**
   - Section heading: "Najczęściej zadawane pytania"
@@ -118,7 +118,7 @@ Tasks are grouped into phases. Within a phase, tasks can often run in parallel.
 - **Depends on:** 005
 - **Acceptance:** FAQ renders, JSON-LD validates (Google Rich Results Test), answers are factually correct
 
-### 010 — Bank transfer section (on-page)
+### 010 — Bank transfer section (on-page) ✅ (placeholder — real account number pending)
 - **Scope:** Add a secondary donation section below the FAQ
 - **Delivers:**
   - Section heading: "Wpłata przelewem" or "Pomóż też przelewem"
@@ -129,7 +129,7 @@ Tasks are grouped into phases. Within a phase, tasks can often run in parallel.
 - **Depends on:** 005
 - **Acceptance:** Section renders, copy button works, placeholder values clearly marked for replacement
 
-### 011 — Facebook updates links section (on-page)
+### 011 — Facebook updates links section (on-page) ✅ (placeholder — real FB URLs pending)
 - **Scope:** Add a curated links section pointing to Facebook posts
 - **Delivers:**
   - Section heading: "Aktualności" or "Śledź postępy Marysi"
@@ -140,7 +140,7 @@ Tasks are grouped into phases. Within a phase, tasks can often run in parallel.
 - **Depends on:** 005
 - **Acceptance:** Links section renders, no FB embeds, placeholders clearly marked
 
-### 012 — Trust signals and enriched footer
+### 012 — Trust signals and enriched footer ✅
 - **Scope:** Enhance trust signals throughout the page and redesign the footer
 - **Delivers:**
   - Trust bar near the donation card: "100% wpłat trafia na subkonto Marysi" + OPP badge text
@@ -155,7 +155,7 @@ Tasks are grouped into phases. Within a phase, tasks can often run in parallel.
 - **Depends on:** 005
 - **Acceptance:** Trust signals visible, footer has all required info, KRS repeated at least 3× on page
 
-### 013 — Smooth-scroll navigation and section anchors
+### 013 — Smooth-scroll navigation and section anchors ✅
 - **Scope:** Add a minimal in-page navigation and stable anchors
 - **Delivers:**
   - Compact nav bar (not hamburger — just 3–4 text links for a one-page site):
@@ -168,7 +168,7 @@ Tasks are grouped into phases. Within a phase, tasks can often run in parallel.
 - **Depends on:** 007, 008, 009 (sections must exist)
 - **Acceptance:** Nav links scroll to correct sections, anchors work as direct URLs, mobile nav is usable
 
-### 014 — OG image placeholder and social meta
+### 014 — OG image placeholder and social meta ✅ (placeholder — real OG image pending)
 - **Scope:** Create OG image placeholder and ensure all social sharing meta is correct
 - **Delivers:**
   - `docs/assets/og-image.jpg` — placeholder 1200×630 image (can be a solid color with text overlay: "Przekaż 1,5% podatku dla Marysi — KRS 0000382243")
@@ -317,7 +317,7 @@ Phase 4 (extras):
 ## Execution notes
 
 - **Phase 0 is complete.** All foundation tasks (001–004) are done.
-- **Phase 1 is the priority.** Build the full single-page landing before any secondary pages.
+- **Phase 1 is nearly complete.** Tasks 005–014 implemented. Remaining: 015 (WebSite JSON-LD). Some tasks have placeholder content marked `<!-- REPLACE -->` awaiting real data (bank account, FB URLs, story verification, photos).
 - **Parallel tracks in Phase 1:** Tasks 005–012 can mostly run in parallel (005 first, then the rest). Task 013 (nav) depends on sections existing.
 - **Each task = one PR** — keep diffs small and reviewable.
 - **Placeholder policy:** Use `<!-- REPLACE: description -->` HTML comments for content that needs real data (bank account, FB post URLs, last-year amounts). This makes it easy to search and replace before launch.
