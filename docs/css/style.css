@@ -65,7 +65,7 @@ body {
   border: 2px solid #2563eb;
   border-radius: 12px;
   padding: 1.5rem;
-  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.08);
+  box-shadow: 0 2px 8px rgb(37 99 235 / 8%);
 }
 
 .donation-card h2 {
@@ -107,7 +107,7 @@ body {
   font-size: 1.0625rem;
   font-weight: 600;
   color: #1a1a1a;
-  word-break: break-word;
+  overflow-wrap: anywhere;
 }
 
 .copy-btn {
@@ -120,7 +120,9 @@ body {
   border: 1px solid #bfdbfe;
   border-radius: 6px;
   cursor: pointer;
-  transition: background 0.15s, color 0.15s;
+  transition:
+    background 0.15s,
+    color 0.15s;
   white-space: nowrap;
 }
 
@@ -157,7 +159,9 @@ body {
   text-decoration: none;
   font-weight: 600;
   border-radius: 8px;
-  transition: background 0.15s, box-shadow 0.15s;
+  transition:
+    background 0.15s,
+    box-shadow 0.15s;
   text-align: center;
 }
 
@@ -177,7 +181,7 @@ body {
 
 .btn-primary:hover {
   background: #1d4ed8;
-  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.25);
+  box-shadow: 0 2px 8px rgb(37 99 235 / 25%);
 }
 
 .btn-secondary {
@@ -204,7 +208,7 @@ body {
 }
 
 /* Desktop tweaks */
-@media (min-width: 640px) {
+@media (width >= 640px) {
   .hero {
     padding: 3.5rem 0 2rem;
   }

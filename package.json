@@ -1,0 +1,24 @@
+{
+  "name": "marysia15.github.io",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "format:check": "prettier --check \"docs/**/*.{html,css,js}\" \"tests/**/*.js\" \"*.{js,json}\"",
+    "lint": "npm run lint:js && npm run lint:css && npm run lint:html",
+    "lint:js": "eslint docs/js tests playwright.config.js",
+    "lint:css": "stylelint \"docs/css/**/*.css\"",
+    "lint:html": "html-validate \"docs/**/*.html\"",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.20.0",
+    "@playwright/test": "^1.51.0",
+    "eslint": "^9.20.1",
+    "globals": "^15.14.0",
+    "html-validate": "^9.3.0",
+    "prettier": "^3.5.0",
+    "stylelint": "^16.15.0",
+    "stylelint-config-standard": "^37.0.0"
+  }
+}
