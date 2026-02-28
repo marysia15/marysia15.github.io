@@ -92,3 +92,9 @@ All of these must be present in `<head>`:
   - Single commit revert restores empty docs/ directory
 
 ## Result / Notes (append-only)
+- **2026-02-19:** Implemented all three files: `docs/index.html`, `docs/css/style.css`, `docs/js/copy.js`.
+- All 12 acceptance checks pass (lang, h1 count, title keywords, meta description, OG tags, canonical, viewport, donation data, copy buttons, data-testid attrs, filing window, CTA links).
+- Copy-to-clipboard uses `navigator.clipboard.writeText()` with "Skopiowano!" visual feedback and `.copied` CSS class.
+- Mobile-first responsive design with 640px breakpoint.
+- OG image path set to placeholder `assets/og-image.jpg` as specified.
+- No frameworks or build steps introduced.
