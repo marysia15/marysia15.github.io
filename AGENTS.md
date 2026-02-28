@@ -8,6 +8,7 @@ This repo is a static website published via GitHub Pages. Your job as an agent i
 - `tests/e2e/` — Playwright End-to-End (E2E) UI tests
 - `tasks/` — task contracts (one file per change)
 - `scripts/` — helper scripts (optional)
+- `ARCHITECTURE.md` — current implementation snapshot (what exists vs. planned)
 
 ## Golden workflow (do this every time)
 1. Create or pick a task file: `tasks/<slug>.md` (use `tasks/TEMPLATE.md`).
@@ -80,3 +81,7 @@ We use Playwright for browser-level checks in CI.
 
 You are building a project specified in PRD.md 
 Please always before executing the task know what you are building and understand the PRD.md.
+
+## Learnings (concise)
+- Validate from the same working directory you document (`pwd` + server command), otherwise local behavior can be misread.
+- Before debugging app code, verify port ownership (`lsof ...`) to avoid chasing a stale server process.
