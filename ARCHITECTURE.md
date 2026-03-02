@@ -3,7 +3,7 @@
 ## Scope
 Static GitHub Pages site for Marysia 1.5% PIT campaign. No backend, no build pipeline.
 
-## Current implementation status (as of 2026-02-28)
+## Current implementation status (as of 2026-03-02)
 
 ### 1) Website runtime
 - Hosting model: static files served from `docs/` via GitHub Pages.
@@ -18,8 +18,9 @@ Polish mobile-first landing page redesigned with a warm, credible aesthetic. All
 - **Hero** (`#` / `.hero`): Two-column layout (photo + content) on desktop, stacked on mobile. H1, intro paragraph (mama's voice), trust line ("To nic nie kosztuje"), primary CTA scrolling to donation card.
 - **Donation Card** (`#dane-do-pit` / `.pit-data`): Prominent card with coral border. KRS and cel szczegółowy with copy buttons. Trust badge ("100% wpłat trafia na subkonto"), filing window date, link to foundation subaccount.
 - **How-to Steps** (`#jak-przekazac` / `.how-to`): Three numbered steps (e-PIT login, KRS entry, cel szczegółowy entry) with inline copy buttons. Filing deadline badge. Alternative methods note.
-- **Story** (`#historia` / `.story`): Two-column grid (text + photos). Placeholder copy marked with `<!-- REPLACE -->` comments. Two photo placeholders.
-- **FAQ** (`#faq` / `.faq`): Seven `<details>` accordion items covering common Polish donor questions. Placeholder for JSON-LD FAQPage structured data (task 009).
+- **Story** (`#historia` / `.story`): Two-column grid (text + photos). Real story text in Adrianna's (mama) voice — 5 paragraphs covering Marysia's premature birth, personality, rehabilitation needs, and how funds are used. Signed by Adrianna. Photos: `terapia.jpg` (therapy session) and `hero2.jpg` (reading at home).
+- **Photo Gallery** (`#galeria` / `.gallery`): Chronological 12-photo gallery titled "Marysia na przekór diagnozom". Responsive grid (2-col mobile, 3-col desktop). Each photo has a figcaption. Uses 12 of 16 available photos covering Marysia's journey from NICU to present day.
+- **FAQ** (`#faq` / `.faq`): Seven `<details>` accordion items covering common Polish donor questions. FAQPage JSON-LD structured data included in `<head>`.
 - **Bank Transfer** (`#przelew` / `.bank`): PLN account placeholder with copy button. Placeholder for IBAN/SWIFT for foreign transfers.
 - **Updates** (`#aktualnosci` / `.updates`): Placeholder for curated Facebook post links. No embedded widgets.
 - **Footer** (`.site-footer`): Foundation name, KRS repeat, OPP status, footer navigation links, copyright.
@@ -47,15 +48,17 @@ CSS custom properties define a consistent design system:
 - Sticky CTA visibility toggle via IntersectionObserver (hides when donation card is in viewport)
 
 ### 5) Static assets (`docs/assets/`)
-- `hero.jpg` — hero photo placeholder (provided by user)
-- `story-1.jpg` — story section photo placeholder (solid color)
-- `story-2.jpg` — story section photo placeholder (solid color)
-- `og-image.jpg` — Open Graph image placeholder (solid color, 1200x630)
+16 authentic photos of Marysia used across the site:
+- `hero1.jpg` — hero photo (Marysia smiling in nature, used in hero section + OG image)
+- `hero2.jpg` — reading at home (used in story section)
+- `terapia.jpg` — therapy session with therapist (used in story section)
+- `terapia2.jpg`, `wczesniak.jpg`, `wczesniak2.jpg`, `usmiech-mala.jpg`, `christmas.jpg`, `mala_mis.jpg`, `szpital-operacja.jpg`, `gra_na_pianinie.jpg`, `zabawa.jpg`, `uczy_sie.jpg`, `ksiezniczka.jpg`, `wozek_smieje_sie.jpg` — used in gallery section
+- `wozek.jpg` — available but not currently used on page
 
 ### 6) SEO infrastructure
 - `docs/robots.txt` exists and references sitemap.
 - `docs/sitemap.xml` exists and includes homepage URL.
-- JSON-LD structured data: not yet added (tasks 009, 015).
+- JSON-LD structured data: `WebSite` and `FAQPage` schemas included in `<head>`.
 
 ### 7) Tooling and quality gates
 - Node tooling configured via `package.json`.
@@ -81,9 +84,8 @@ CSS custom properties define a consistent design system:
 GitHub Pages should be configured to serve from the `/docs` folder on the `main` branch. This eliminates the `/docs` URL slug and makes `marysia15.github.io` serve `docs/index.html` directly. Once configured, the root `index.html` redirect file can be deleted.
 
 ## Not implemented yet (from roadmap)
-- JSON-LD structured data: `FAQPage` (task 009) and `WebSite` (task 015)
-- Real photos replacing placeholders (hero, story, OG image)
-- Real content replacing `<!-- REPLACE -->` placeholders (bank account, Facebook URLs, story text verification)
+- Real content replacing remaining `<!-- REPLACE -->` placeholders (bank account number, Facebook URLs, last year amount)
+- Dedicated OG image (currently uses hero1.jpg; ideally a 1200x630 image with text overlay)
 - Secondary pages: `/jak-przekazac-15`, `/dla-ksiegowych`, `/en`
 - Accountant asset pack (PDF, social images)
 - Full-section E2E test coverage beyond smoke tests

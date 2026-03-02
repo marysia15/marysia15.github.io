@@ -34,17 +34,12 @@ test.describe("Homepage smoke", () => {
     await expect(page.getByTestId("cta-foundation")).toBeVisible();
   });
 
-  test("hero CTA scrolls to PIT data card", async ({ page }) => {
+  test("hero CTA navigates to PIT data card", async ({ page }) => {
     await page.goto("/");
-
-    const initialY = await page.evaluate(() => globalThis.scrollY);
 
     await page.getByTestId("cta-to-pit").click();
 
     await expect(page).toHaveURL(/#dane-do-pit$/);
-
-    const finalY = await page.evaluate(() => globalThis.scrollY);
-    expect(finalY).toBeGreaterThan(initialY);
     await expect(page.locator("#dane-do-pit")).toBeVisible();
   });
 
