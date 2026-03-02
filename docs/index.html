@@ -18,10 +18,87 @@
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://marysia15.github.io/" />
-    <meta property="og:image" content="https://marysia15.github.io/assets/og-image.jpg" />
+    <meta property="og:image" content="https://marysia15.github.io/assets/hero1.jpg" />
     <meta property="og:locale" content="pl_PL" />
 
     <link rel="stylesheet" href="css/style.css" />
+
+    <!-- JSON-LD: WebSite -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Przekaż 1,5% podatku dla Marysi Wywiał",
+        "url": "https://marysia15.github.io/",
+        "description": "Przekaż 1,5% swojego podatku PIT dla Marysi Wywiał. KRS 0000382243, cel szczegółowy: 1884 pomoc dla Marysi Wywiał."
+      }
+    </script>
+
+    <!-- JSON-LD: FAQPage -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Czy przekazanie 1,5% mnie coś kosztuje?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Nie. To część podatku, który i tak płacisz — po prostu decydujesz, że 1,5% trafi do Marysi zamiast do budżetu państwa. Nie dopłacasz ani złotówki."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Kto może przekazać 1,5%?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Każdy podatnik rozliczający PIT w Polsce — zarówno PIT-37 (umowa o pracę, zlecenie) jak i PIT-38 (dochody kapitałowe)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Czy cała kwota trafia do Marysi?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Tak. 100% przekazanej kwoty trafia na indywidualne subkonto Marysi w Fundacji Kawałek Nieba. Fundacja nie pobiera prowizji z 1,5%."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do kiedy mogę rozliczyć PIT?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Termin rozliczenia PIT za 2025 rok upływa 30 kwietnia 2026. Jeśli nie złożysz zeznania samodzielnie, Twój e-PIT zostanie zaakceptowany automatycznie — ale bez przekazania 1,5%."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Jak sprawdzić, czy mój 1,5% dotarł?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Możesz skontaktować się bezpośrednio z Fundacją Kawałek Nieba lub sprawdzić informacje na stronie fundacji: kawalek-nieba.pl/marysia-wywial/"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Co jeśli nie rozliczam się samodzielnie?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Twój księgowy lub biuro rachunkowe może wpisać KRS i cel szczegółowy w Twoim imieniu — wystarczy przesłać im tę stronę."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Czy mogę też wpłacić darowiznę przelewem?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Tak! Oprócz 1,5% podatku możesz też pomóc Marysi wpłacając darowiznę bezpośrednio na konto fundacji."
+            }
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <!-- Navigation -->
@@ -40,30 +117,28 @@
     <main>
       <!-- ═══ Hero ═══ -->
       <section class="hero">
+        <figure class="hero-media">
+          <img
+            src="assets/szpital-operacja.jpg"
+            width="1200"
+            height="675"
+            alt="Marysia w szpitalu — wielkie niebieskie oczy patrzą prosto w obiektyw"
+            data-testid="hero-image"
+          />
+        </figure>
         <div class="container">
-          <div class="hero-layout">
-            <figure class="hero-media">
-              <img
-                src="assets/hero.jpg"
-                width="800"
-                height="600"
-                alt="Uśmiechnięta Marysia podczas codziennej aktywności"
-                data-testid="hero-image"
-              />
-            </figure>
-            <div class="hero-content">
-              <h1>Przekaż 1,5% podatku dla Marysi Wywiał</h1>
-              <p class="intro">
-                Jestem Adrianna, mama Marysi. Każdego dnia pracujemy nad zdrowiem i samodzielnością
-                Marysi, ale też walczymy o zwykłe chwile radości. Dziękuję, że jesteś z nami.
-              </p>
-              <p class="trust-line">
-                To nic nie kosztuje — przekazujesz część podatku, który i tak płacisz
-              </p>
-              <a href="#dane-do-pit" class="btn btn-primary hero-cta" data-testid="cta-to-pit"
-                >Przejdź do danych do PIT</a
-              >
-            </div>
+          <div class="hero-content">
+            <h1>Przekaż 1,5% podatku dla Marysi Wywiał</h1>
+            <p class="intro">
+              Jestem Adrianna, mama Marysi. Każdego dnia pracujemy nad zdrowiem i samodzielnością
+              Marysi, ale też walczymy o zwykłe chwile radości. Dziękuję, że jesteś z nami.
+            </p>
+            <p class="trust-line">
+              To nic nie kosztuje — przekazujesz część podatku, który i tak płacisz
+            </p>
+            <a href="#dane-do-pit" class="btn btn-primary hero-cta" data-testid="cta-to-pit"
+              >Przejdź do danych do PIT</a
+            >
           </div>
         </div>
       </section>
@@ -123,7 +198,7 @@
         </div>
       </section>
 
-      <!-- ═══ How-to Steps (task 007 — placeholder content) ═══ -->
+      <!-- ═══ How-to Steps ═══ -->
       <section class="how-to" id="jak-przekazac" aria-label="Jak przekazać 1,5%">
         <div class="container">
           <div class="section-heading">
@@ -180,63 +255,206 @@
             <span class="how-to-deadline">Rozlicz do 30 kwietnia 2026</span>
           </div>
           <p class="how-to-note">
-            Możesz też przekazać 1,5% przez
-            <strong>PITax.pl</strong>, program do rozliczeń lub formularz papierowy.
+            Możesz też przekazać 1,5% przez program do rozliczeń podatkowych lub formularz
+            papierowy.
           </p>
         </div>
       </section>
 
-      <!-- ═══ Story (task 008 — placeholder content) ═══ -->
+      <!-- ═══ Story ═══ -->
       <section class="story" id="historia" aria-label="Historia Marysi">
         <div class="container">
           <div class="section-heading">
             <h2>O Marysi</h2>
           </div>
 
-          <div class="story-grid">
-            <div class="story-text">
-              <!-- REPLACE: Story content to be written by Adrianna / verified with family -->
-              <p>
-                Marysia jest dzielną, uśmiechniętą dziewczynką, która każdego dnia udowadnia, że
-                radość nie zna barier. Uwielbia muzykę, kontakt z ludźmi i każdy mały sukces
-                traktuje jak wielkie zwycięstwo.
-              </p>
-              <p>
-                Na co dzień Marysia potrzebuje regularnej rehabilitacji i terapii, które pomagają
-                jej w rozwoju i codziennym funkcjonowaniu. Każdy postęp — nawet najmniejszy — to
-                efekt systematycznej pracy i ogromnej determinacji.
-              </p>
-              <p>
-                Zebrane środki z 1,5% podatku pokrywają koszty rehabilitacji, terapii i
-                specjalistycznego sprzętu, które są niezbędne w codziennym życiu Marysi.
-              </p>
-              <!-- END REPLACE -->
-            </div>
-            <div class="story-photos">
-              <figure class="story-photo">
-                <img
-                  src="assets/story-1.jpg"
-                  width="600"
-                  height="400"
-                  alt="Marysia podczas codziennej aktywności"
-                  loading="lazy"
-                />
-              </figure>
-              <figure class="story-photo">
-                <img
-                  src="assets/story-2.jpg"
-                  width="600"
-                  height="400"
-                  alt="Marysia podczas zabawy"
-                  loading="lazy"
-                />
-              </figure>
-            </div>
+          <div class="story-flow">
+            <p>
+              Marysia przyszła na świat jako wcześniak. Jej start był trudny — pierwsze tygodnie
+              spędziła na oddziale neonatologii, otoczona czujną opieką lekarzy. Ale od samego
+              początku pokazywała charakter i wolę walki.
+            </p>
+            <p>
+              Dziś Marysia jest uśmiechniętą, ciekawą świata dziewczynką. Uwielbia muzykę — gra na
+              pianinie i śmieje się przy każdej melodii. Kocha książki, zabawę i kontakt z ludźmi.
+              Każdy jej sukces — nawet ten najmniejszy — jest dla nas ogromną radością.
+            </p>
+
+            <figure class="story-photo-inline">
+              <img
+                src="assets/terapia.jpg"
+                width="600"
+                height="800"
+                alt="Marysia podczas rehabilitacji — uśmiechnięta, z terapeutką"
+                loading="lazy"
+              />
+            </figure>
+
+            <p>
+              Na co dzień Marysia potrzebuje intensywnej rehabilitacji neurologicznej i terapii. To
+              ciężka praca — zarówno dla niej, jak i dla terapeutów — ale efekty widać z każdym
+              tygodniem. Marysia porusza się na wózku, co nie przeszkadza jej odkrywać świata na
+              własnych zasadach.
+            </p>
+            <p>
+              Zebrane środki z 1,5% podatku i darowizn pokrywają koszty rehabilitacji, terapii i
+              specjalistycznego sprzętu. Dzięki Waszemu wsparciu Marysia może się rozwijać i walczyć
+              o każdy kolejny krok.
+            </p>
+
+            <figure class="story-photo-inline">
+              <img
+                src="assets/hero2.jpg"
+                width="600"
+                height="800"
+                alt="Marysia w kwiecistej sukience, z książką w dłoni"
+                loading="lazy"
+              />
+            </figure>
+
+            <p class="story-signature">
+              Dziękuję, że jesteś z nami — każde przekazane 1,5% to dla nas znak, że nie jesteśmy
+              sami.<br />
+              — Adrianna, mama Marysi
+            </p>
           </div>
         </div>
       </section>
 
-      <!-- ═══ FAQ (task 009 — placeholder content) ═══ -->
+      <!-- ═══ Photo Gallery ═══ -->
+      <section class="gallery" id="galeria" aria-label="Galeria zdjęć Marysi">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Marysia na przekór diagnozom</h2>
+            <p>Od pierwszych dni do dziś — każdy krok to zwycięstwo</p>
+          </div>
+
+          <div class="gallery-grid">
+            <figure class="gallery-item">
+              <img
+                src="assets/wczesniak2.jpg"
+                width="400"
+                height="533"
+                alt="Marysia jako maleńki wcześniak w szpitalu"
+                loading="lazy"
+              />
+              <figcaption>Pierwsze chwile</figcaption>
+            </figure>
+            <figure class="gallery-item">
+              <img
+                src="assets/wczesniak.jpg"
+                width="400"
+                height="267"
+                alt="Marysia na oddziale neonatologii"
+                loading="lazy"
+              />
+              <figcaption>Oddział neonatologii</figcaption>
+            </figure>
+            <figure class="gallery-item">
+              <img
+                src="assets/usmiech-mala.jpg"
+                width="400"
+                height="400"
+                alt="Mała Marysia śmieje się radośnie w foteliku"
+                loading="lazy"
+              />
+              <figcaption>Pierwszy wielki uśmiech</figcaption>
+            </figure>
+            <figure class="gallery-item">
+              <img
+                src="assets/christmas.jpg"
+                width="400"
+                height="320"
+                alt="Marysia w czerwonej sukience ubiera choinkę z mamą"
+                loading="lazy"
+              />
+              <figcaption>Święta — ubieranie choinki</figcaption>
+            </figure>
+            <figure class="gallery-item">
+              <img
+                src="assets/mala_mis.jpg"
+                width="400"
+                height="400"
+                alt="Uśmiechnięta Marysia z ukochanym pluszowym misiem"
+                loading="lazy"
+              />
+              <figcaption>Z ukochanym misiem</figcaption>
+            </figure>
+            <figure class="gallery-item">
+              <img
+                src="assets/gra_na_pianinie.jpg"
+                width="400"
+                height="533"
+                alt="Marysia gra na pianinie przy choince"
+                loading="lazy"
+              />
+              <figcaption>Gra na pianinie</figcaption>
+            </figure>
+            <figure class="gallery-item">
+              <img
+                src="assets/terapia2.jpg"
+                width="400"
+                height="533"
+                alt="Marysia podczas rehabilitacji neurologicznej z terapeutką"
+                loading="lazy"
+              />
+              <figcaption>Rehabilitacja — ciężka praca</figcaption>
+            </figure>
+            <figure class="gallery-item">
+              <img
+                src="assets/zabawa.jpg"
+                width="400"
+                height="300"
+                alt="Marysia bawi się samochodzikami przy stole"
+                loading="lazy"
+              />
+              <figcaption>Kreatywna zabawa</figcaption>
+            </figure>
+            <figure class="gallery-item">
+              <img
+                src="assets/uczy_sie.jpg"
+                width="400"
+                height="533"
+                alt="Marysia czyta atlas i uśmiecha się do kamery"
+                loading="lazy"
+              />
+              <figcaption>Poznaje świat</figcaption>
+            </figure>
+            <figure class="gallery-item">
+              <img
+                src="assets/hero1.jpg"
+                width="400"
+                height="533"
+                alt="Uśmiechnięta Marysia w wózku wśród zieleni w parku"
+                loading="lazy"
+              />
+              <figcaption>W zielonej oazie</figcaption>
+            </figure>
+            <figure class="gallery-item">
+              <img
+                src="assets/ksiezniczka.jpg"
+                width="400"
+                height="600"
+                alt="Marysia w koronie księżniczki — portret"
+                loading="lazy"
+              />
+              <figcaption>Nasza księżniczka</figcaption>
+            </figure>
+            <figure class="gallery-item">
+              <img
+                src="assets/wozek_smieje_sie.jpg"
+                width="400"
+                height="533"
+                alt="Roześmiana Marysia na spacerze w zimowej czapce"
+                loading="lazy"
+              />
+              <figcaption>Radość na spacerze</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ FAQ ═══ -->
       <section class="faq" id="faq" aria-label="Najczęściej zadawane pytania">
         <div class="container">
           <div class="section-heading">
@@ -307,7 +525,7 @@
         </div>
       </section>
 
-      <!-- ═══ Bank Transfer (task 010 — placeholder content) ═══ -->
+      <!-- ═══ Bank Transfer ═══ -->
       <section class="bank" id="przelew" aria-label="Wpłata przelewem">
         <div class="container">
           <div class="section-heading">
@@ -319,10 +537,9 @@
             <div class="bank-row">
               <div class="donation-field">
                 <span class="donation-label">Numer konta (PLN)</span>
-                <!-- REPLACE: actual bank account number -->
-                <span class="donation-value">00 0000 0000 0000 0000 0000 0000</span>
+                <span class="donation-value">PL31 1090 2835 0000 0001 2173 1374</span>
               </div>
-              <button class="copy-btn" data-copy="00 0000 0000 0000 0000 0000 0000" type="button">
+              <button class="copy-btn" data-copy="PL31 1090 2835 0000 0001 2173 1374" type="button">
                 Kopiuj
               </button>
             </div>
@@ -336,13 +553,11 @@
                 Kopiuj
               </button>
             </div>
-
-            <!-- REPLACE: add IBAN and SWIFT/BIC for foreign transfers -->
           </div>
         </div>
       </section>
 
-      <!-- ═══ Updates / Facebook Links (task 011 — placeholder content) ═══ -->
+      <!-- ═══ Updates / Facebook Links ═══ -->
       <section class="updates" id="aktualnosci" aria-label="Aktualności">
         <div class="container">
           <div class="section-heading">
@@ -351,19 +566,27 @@
           </div>
 
           <div class="updates-list">
-            <!-- REPLACE: FB post URL and description -->
-            <a href="#" class="update-link" rel="noopener">
-              <span class="update-date">2026</span>
+            <a
+              href="https://www.facebook.com/MarysiaNaPrzekorDiagnozom"
+              class="update-link"
+              target="_blank"
+              rel="noopener"
+            >
               <span class="update-title"
-                >Aktualizacja wkrótce — śledź nasz profil na Facebooku</span
+                >Na naszym profilu znajdziesz aktualne zdjęcia, relacje z rehabilitacji i codzienne
+                postępy Marysi.</span
               >
             </a>
-            <!-- END REPLACE -->
           </div>
 
           <div class="section-cta">
-            <!-- REPLACE: actual Facebook page URL -->
-            <a href="#" class="btn btn-secondary" rel="noopener">Profil na Facebooku</a>
+            <a
+              href="https://www.facebook.com/MarysiaNaPrzekorDiagnozom"
+              class="btn btn-secondary"
+              target="_blank"
+              rel="noopener"
+              >Odwiedź profil na Facebooku</a
+            >
           </div>
         </div>
       </section>
@@ -383,21 +606,24 @@
               <li>
                 <a href="http://kawalek-nieba.pl/marysia-wywial/" rel="noopener">Strona fundacji</a>
               </li>
-              <!-- REPLACE: actual Facebook page URL -->
-              <li><a href="#" rel="noopener">Facebook</a></li>
+              <li>
+                <a
+                  href="https://www.facebook.com/MarysiaNaPrzekorDiagnozom"
+                  target="_blank"
+                  rel="noopener"
+                  >Facebook</a
+                >
+              </li>
             </ul>
           </div>
           <div class="footer-copy">
-            <p>
-              <!-- REPLACE: last year amount -->
-              Strona stworzona z miłością, aby pomóc Marysi.
-            </p>
+            <p>Strona stworzona z miłością, aby pomóc Marysi.</p>
           </div>
         </div>
       </div>
     </footer>
 
-    <!-- ═══ Sticky Mobile CTA (task 006) ═══ -->
+    <!-- ═══ Sticky Mobile CTA ═══ -->
     <section class="sticky-cta" aria-label="Szybkie kopiowanie KRS">
       <div class="sticky-cta-inner">
         <button class="btn btn-primary copy-btn" data-copy="0000382243" type="button">
