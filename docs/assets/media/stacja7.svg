@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 48" width="160" height="48">
+  <rect width="160" height="48" rx="6" fill="#fff5f0"/>
+  <text x="68" y="31" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-weight="600" font-size="18" fill="#d35400">stacja</text>
+  <text x="120" y="33" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="28" fill="#d35400">7</text>
+</svg>
