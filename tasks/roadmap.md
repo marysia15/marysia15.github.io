@@ -39,7 +39,7 @@ Tasks are grouped into phases. Within a phase, tasks can often run in parallel.
 
 ---
 
-## Phase 1 — Excellent landing page (single-page site, all sections on `/`) 🔄 IN PROGRESS
+## Phase 1 — Excellent landing page (single-page site, all sections on `/`) ✅ COMPLETE
 
 **Design philosophy:** This is a one-page donation site. Most visitors arrive from a Facebook link on their phone. They need to copy the KRS and cel szczegółowy in under 30 seconds — or read more to build trust. Every section must earn its place by either converting or building confidence. No separate pages until Phase 2; everything lives on the single landing page.
 
@@ -99,7 +99,7 @@ Tasks are grouped into phases. Within a phase, tasks can often run in parallel.
 - **Depends on:** 005
 - **Acceptance:** Section renders, images have alt text, no invented medical facts, semantic headings
 
-### 009 — FAQ section with JSON-LD (on-page) ✅ (FAQ section done; JSON-LD pending)
+### 009 — FAQ section with JSON-LD (on-page) ✅
 - **Scope:** Add an FAQ accordion/section to `docs/index.html`
 - **Delivers:**
   - Section heading: "Najczęściej zadawane pytania"
@@ -118,7 +118,7 @@ Tasks are grouped into phases. Within a phase, tasks can often run in parallel.
 - **Depends on:** 005
 - **Acceptance:** FAQ renders, JSON-LD validates (Google Rich Results Test), answers are factually correct
 
-### 010 — Bank transfer section (on-page) ✅ (placeholder — real account number pending)
+### 010 — Bank transfer section (on-page) ✅
 - **Scope:** Add a secondary donation section below the FAQ
 - **Delivers:**
   - Section heading: "Wpłata przelewem" or "Pomóż też przelewem"
@@ -129,7 +129,7 @@ Tasks are grouped into phases. Within a phase, tasks can often run in parallel.
 - **Depends on:** 005
 - **Acceptance:** Section renders, copy button works, placeholder values clearly marked for replacement
 
-### 011 — Facebook updates links section (on-page) ✅ (placeholder — real FB URLs pending)
+### 011 — Facebook updates links section (on-page) ✅
 - **Scope:** Add a curated links section pointing to Facebook posts
 - **Delivers:**
   - Section heading: "Aktualności" or "Śledź postępy Marysi"
@@ -168,7 +168,7 @@ Tasks are grouped into phases. Within a phase, tasks can often run in parallel.
 - **Depends on:** 007, 008, 009 (sections must exist)
 - **Acceptance:** Nav links scroll to correct sections, anchors work as direct URLs, mobile nav is usable
 
-### 014 — OG image placeholder and social meta ✅ (placeholder — real OG image pending)
+### 014 — OG image and social meta ✅ (uses hero1.jpg — dedicated 1200×630 OG image pending)
 - **Scope:** Create OG image placeholder and ensure all social sharing meta is correct
 - **Delivers:**
   - `docs/assets/og-image.jpg` — placeholder 1200×630 image (can be a solid color with text overlay: "Przekaż 1,5% podatku dla Marysi — KRS 0000382243")
@@ -178,7 +178,7 @@ Tasks are grouped into phases. Within a phase, tasks can often run in parallel.
 - **Depends on:** 005
 - **Acceptance:** OG image file exists, meta tags reference it correctly, Facebook Sharing Debugger shows clean preview
 
-### 015 — JSON-LD WebSite structured data
+### 015 — JSON-LD WebSite structured data ✅
 - **Scope:** Add `WebSite` JSON-LD schema to the homepage `<head>`
 - **Delivers:**
   - `WebSite` schema with name, URL, and description
@@ -264,22 +264,19 @@ Tasks are grouped into phases. Within a phase, tasks can often run in parallel.
 
 ---
 
-## Photo checklist (for Phase 1 — replace placeholders with real photos)
+## Photo assignments (Phase 1 — all real photos in place)
 
-All photo slots are implemented as placeholders in Phase 1. Before launch, replace with real photos:
+16 authentic photos provided in `docs/assets/`. 15 are used across the site:
 
-| Slot | File path | Dimensions | Purpose | Guidance |
-|------|-----------|-----------|---------|----------|
-| Hero | `docs/assets/hero.jpg` | 800×600 (landscape) | Above the fold, first impression | Marysia smiling or engaged in activity. Warm, natural light. Shows personality, not diagnosis. |
-| Story 1 | `docs/assets/story-1.jpg` | 600×400 | Daily life / therapy | Candid moment: therapy session, playing, learning |
-| Story 2 | `docs/assets/story-2.jpg` | 600×400 | Progress / activity | Shows growth or a happy moment |
-| OG image | `docs/assets/og-image.jpg` | 1200×630 | Facebook/WhatsApp link preview | Marysia's photo + "Przekaż 1,5% podatku" + KRS number overlay |
+| Slot | File | Usage |
+|------|------|-------|
+| Hero | `szpital-operacja.jpg` | Full-bleed banner (4:3 mobile, 21:9 desktop) with gradient fade |
+| OG image | `hero1.jpg` | Social sharing (`og:image`) + gallery |
+| Story | `terapia.jpg`, `hero2.jpg` | Interleaved between story paragraphs |
+| Gallery | 12 photos | Chronological grid: `wczesniak2.jpg`, `wczesniak.jpg`, `usmiech-mala.jpg`, `christmas.jpg`, `mala_mis.jpg`, `gra_na_pianinie.jpg`, `terapia2.jpg`, `zabawa.jpg`, `uczy_sie.jpg`, `ksiezniczka.jpg`, `wozek_smieje_sie.jpg`, `hero1.jpg` |
+| Unused | `wozek.jpg` | Available but not currently placed |
 
-**General photo rules:**
-- Authentic, not stock. Show the child, not the disease.
-- Max 150 KB per image after optimization (WebP preferred, JPEG fallback).
-- Meaningful Polish alt text describing the photo.
-- Vertical or square crops work best for mobile hero.
+**Still needed:** Dedicated OG image (1200×630 with text overlay: "Przekaż 1,5% podatku dla Marysi — KRS 0000382243").
 
 ---
 
@@ -317,9 +314,6 @@ Phase 4 (extras):
 ## Execution notes
 
 - **Phase 0 is complete.** All foundation tasks (001–004) are done.
-- **Phase 1 is nearly complete.** Tasks 005–014 implemented. Remaining: 015 (WebSite JSON-LD). Some tasks have placeholder content marked `<!-- REPLACE -->` awaiting real data (bank account, FB URLs, story verification, photos).
-- **Parallel tracks in Phase 1:** Tasks 005–012 can mostly run in parallel (005 first, then the rest). Task 013 (nav) depends on sections existing.
+- **Phase 1 is complete.** All tasks (005–015) are done. Real photos, story text, bank account, and Facebook URLs are all in place. No `<!-- REPLACE -->` placeholders remain.
 - **Each task = one PR** — keep diffs small and reviewable.
-- **Placeholder policy:** Use `<!-- REPLACE: description -->` HTML comments for content that needs real data (bank account, FB post URLs, last-year amounts). This makes it easy to search and replace before launch.
-- **Photo placeholders:** Use solid-color images with descriptive text until real photos are provided. Never use stock photos.
 - **Claude Code reviews** each PR for tone, accuracy, SEO compliance, and mobile usability before merge.
