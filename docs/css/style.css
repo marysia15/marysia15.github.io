@@ -682,6 +682,57 @@ img {
   color: var(--text-muted);
 }
 
+/* ── FAQ Page ── */
+
+.faq-page-header {
+  padding-top: calc(var(--section-pad) + 2rem);
+}
+
+.faq-page-header .section-heading h1 {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+}
+
+.faq-category-heading {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--accent-border);
+}
+
+.faq-back-cta {
+  padding: 2rem 0 var(--section-pad);
+  text-align: center;
+}
+
+.faq-answer blockquote {
+  margin: 0.75rem 0;
+  padding: 0.75rem 1rem;
+  background: var(--bg);
+  border-left: 3px solid var(--accent-border);
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  line-height: 1.7;
+}
+
+.faq-answer ul {
+  margin: 0.5rem 0;
+  padding-left: 1.25rem;
+}
+
+.faq-answer li {
+  margin-bottom: 0.25rem;
+}
+
+.faq-answer p {
+  margin: 0.5rem 0 0;
+}
+
+.faq-answer p:first-child {
+  margin-top: 0;
+}
+
 /* ── Bank Transfer ── */
 
 .bank {

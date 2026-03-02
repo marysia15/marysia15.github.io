@@ -318,6 +318,7 @@ Phase 4 (extras):
 
 - **Phase 0 is complete.** All foundation tasks (001–004) are done.
 - **Phase 1 is nearly complete.** Tasks 005–014 implemented. Remaining: 015 (WebSite JSON-LD). Some tasks have placeholder content marked `<!-- REPLACE -->` awaiting real data (bank account, FB URLs, story verification, photos).
+- **FAQ page added:** `docs/faq.html` created as a dedicated FAQ page with all questions from `docs/faq.md` organized by category. Landing page FAQ trimmed to 5 curated questions with "Przeczytaj więcej..." link to the full FAQ page. Sitemap updated.
 - **Parallel tracks in Phase 1:** Tasks 005–012 can mostly run in parallel (005 first, then the rest). Task 013 (nav) depends on sections existing.
 - **Each task = one PR** — keep diffs small and reviewable.
 - **Placeholder policy:** Use `<!-- REPLACE: description -->` HTML comments for content that needs real data (bank account, FB post URLs, last-year amounts). This makes it easy to search and replace before launch.

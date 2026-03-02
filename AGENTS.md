@@ -82,6 +82,12 @@ We use Playwright for browser-level checks in CI.
 You are building a project specified in PRD.md 
 Please always before executing the task know what you are building and understand the PRD.md.
 
+## Post-task completion checklist
+After every completed task, before committing:
+1. **Update roadmap:** Mark any related item in `tasks/roadmap.md` as complete (add ✅).
+2. **Update architecture:** Reflect the change in `ARCHITECTURE.md` (new files, changed sections, new infrastructure).
+3. **Capture learnings:** If you hit errors or discovered gotchas, add them to the "Learnings" section below.
+
 ## Learnings (concise)
 - Validate from the same working directory you document (`pwd` + server command), otherwise local behavior can be misread.
 - Before debugging app code, verify port ownership (`lsof ...`) to avoid chasing a stale server process.

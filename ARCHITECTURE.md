@@ -9,6 +9,7 @@ Static GitHub Pages site for Marysia 1.5% PIT campaign. No backend, no build pip
 - Hosting model: static files served from `docs/` via GitHub Pages.
 - Main published content is in `docs/`.
 - `docs/index.html` is the canonical single-page landing (all sections on one page).
+- `docs/faq.html` is a dedicated FAQ page with all questions organized by category (general, 1.5% PIT, donations, foundation). The landing page shows 5 curated questions and links here for the full FAQ.
 - Root `index.html` currently redirects to `./docs/` — **should be removed** once GitHub Pages source is set to `/docs` folder (see deployment note below).
 
 ### 2) Homepage (`docs/index.html`) — full single-page landing
@@ -20,7 +21,7 @@ Polish mobile-first landing page redesigned with a warm, credible aesthetic. All
 - **How-to Steps** (`#jak-przekazac` / `.how-to`): Three numbered steps (e-PIT login, KRS entry, cel szczegółowy entry) with inline copy buttons. Filing deadline badge. Alternative methods note.
 - **Story** (`#historia` / `.story`): Two-column grid (text + photos). Real story text in Adrianna's (mama) voice — 5 paragraphs covering Marysia's premature birth, personality, rehabilitation needs, and how funds are used. Signed by Adrianna. Photos: `terapia.jpg` (therapy session) and `hero2.jpg` (reading at home).
 - **Photo Gallery** (`#galeria` / `.gallery`): Chronological 12-photo gallery titled "Marysia na przekór diagnozom". Responsive grid (2-col mobile, 3-col desktop). Each photo has a figcaption. Uses 12 of 16 available photos covering Marysia's journey from NICU to present day.
-- **FAQ** (`#faq` / `.faq`): Seven `<details>` accordion items covering common Polish donor questions. FAQPage JSON-LD structured data included in `<head>`.
+- **FAQ** (`#faq` / `.faq`): Five `<details>` accordion items (curated selection from full FAQ) with "Przeczytaj więcej..." link to dedicated FAQ page. FAQPage JSON-LD structured data included in `<head>` covers these 5 questions.
 - **Bank Transfer** (`#przelew` / `.bank`): PLN account placeholder with copy button. Placeholder for IBAN/SWIFT for foreign transfers.
 - **Updates** (`#aktualnosci` / `.updates`): Placeholder for curated Facebook post links. No embedded widgets.
 - **Footer** (`.site-footer`): Foundation name, KRS repeat, OPP status, footer navigation links, copyright.
@@ -57,7 +58,7 @@ CSS custom properties define a consistent design system:
 
 ### 6) SEO infrastructure
 - `docs/robots.txt` exists and references sitemap.
-- `docs/sitemap.xml` exists and includes homepage URL.
+- `docs/sitemap.xml` exists and includes homepage and FAQ page URLs.
 - JSON-LD structured data: `WebSite` and `FAQPage` schemas included in `<head>`.
 
 ### 7) Tooling and quality gates
@@ -86,7 +87,7 @@ GitHub Pages should be configured to serve from the `/docs` folder on the `main`
 ## Not implemented yet (from roadmap)
 - Real content replacing remaining `<!-- REPLACE -->` placeholders (bank account number, Facebook URLs, last year amount)
 - Dedicated OG image (currently uses hero1.jpg; ideally a 1200x630 image with text overlay)
-- Secondary pages: `/jak-przekazac-15`, `/dla-ksiegowych`, `/en`
+- Secondary pages: `/jak-przekazac-15`, `/dla-ksiegowych`, `/en` (note: `/faq.html` is now implemented)
 - Accountant asset pack (PDF, social images)
 - Full-section E2E test coverage beyond smoke tests
 - Accessibility audit and performance optimization
