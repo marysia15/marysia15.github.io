@@ -1,5 +1,5 @@
 /* ============================================
-   Design System — Marysia 1.5% Landing Page
+   Design System - Marysia 1.5% Landing Page
    Warm, credible, mobile-first
    ============================================ */
 
@@ -10,13 +10,13 @@
   --bg-card: #fff;
   --bg-hero: linear-gradient(175deg, #fff4ed 0%, #fffaf7 100%);
 
-  /* Primary — warm coral */
+  /* Primary - warm coral */
   --accent: #c8513b;
   --accent-hover: #a8412e;
   --accent-light: #fff0ec;
   --accent-border: #f5c5bb;
 
-  /* Trust — sage green */
+  /* Trust - sage green */
   --trust: #1b7a4a;
   --trust-bg: #eefaf3;
   --trust-border: #b7e4c7;
@@ -577,6 +577,39 @@ img {
   font-weight: 500;
 }
 
+/* ── Story "read more" link ── */
+
+.story-read-more {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.story-read-more-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 2px solid var(--accent-border);
+  padding-bottom: 0.125rem;
+  transition:
+    color 0.15s,
+    border-color 0.15s;
+}
+
+.story-read-more-link:hover {
+  color: var(--accent-hover);
+  border-color: var(--accent);
+}
+
+.story-read-more-link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
 /* ── Photo Gallery ── */
 
 .gallery {
@@ -621,7 +654,7 @@ img {
   text-align: center;
 }
 
-/* ── Media Mentions — ticker bar ── */
+/* ── Media Mentions - ticker bar ── */
 
 .media-mentions {
   padding: var(--section-pad) 0 0;
