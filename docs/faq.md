@@ -1,4 +1,4 @@
-## FAQ — Marysia (1,5% + darowizny)
+## FAQ - Marysia (1,5% + darowizny)
 
 ### Czy mogę przekazać te dane księgowej/księgowemu? Co dokładnie mam jej/jemu wysłać?
 Tak. Najlepiej wyślij księgowej/księgowemu **same dane + prośbę o potwierdzenie** (np. screen sekcji 1,5% albo informację w mailu) oraz o przesłanie **UPO** (UPO = Urzędowe Poświadczenie Odbioru) po wysyłce.
@@ -11,8 +11,8 @@ Tak. Najlepiej wyślij księgowej/księgowemu **same dane + prośbę o potwierdz
 
 ---
 
-### Czy mogę udostępnić link znajomym — macie gotowy tekst do wklejenia?
-Tak — poniżej dwie wersje.
+### Czy mogę udostępnić link znajomym - macie gotowy tekst do wklejenia?
+Tak - poniżej dwie wersje.
 
 **Wersja krótka (SMS / WhatsApp):**
 > Jeśli rozliczasz PIT w Polsce, możesz przekazać **1,5% podatku** dla Marysi (to nic nie kosztuje).  
@@ -21,7 +21,7 @@ Tak — poniżej dwie wersje.
 > Instrukcja: https://marysia15.github.io/
 
 **Wersja dłuższa (Facebook / Messenger / mail):**
-> Pomóż Marysi w rehabilitacji — w PIT możesz przekazać **1,5% podatku** (bez opłat).  
+> Pomóż Marysi w rehabilitacji - w PIT możesz przekazać **1,5% podatku** (bez opłat).  
 > Wystarczy w Twój e-PIT wpisać:  
 > **KRS: 0000382243**  
 > **Cel szczegółowy: 1884 pomoc dla Marysi Wywiał**  
@@ -31,7 +31,7 @@ Tak — poniżej dwie wersje.
 ---
 
 ### Na co idą środki?
-W 100% na **leczenie, rehabilitację i sprzęt wspierający rozwój i samodzielność Marysi** — realnie na to, co robi największą różnicę w jej codziennym funkcjonowaniu. Przykładowo, finansujemy regularną rehabilitację neurologiczną, intensywne turnusy rehabilitacyjne, sprzęt rehabilitacyjny i medyczny (dopasowany do rosnącego dziecka), oraz specjalistyczne wizyty lekarskie.
+W 100% na **leczenie, rehabilitację i sprzęt wspierający rozwój i samodzielność Marysi** - realnie na to, co robi największą różnicę w jej codziennym funkcjonowaniu. Przykładowo, finansujemy regularną rehabilitację neurologiczną, intensywne turnusy rehabilitacyjne, sprzęt rehabilitacyjny i medyczny (dopasowany do rosnącego dziecka), oraz specjalistyczne wizyty lekarskie.
 
 **W ubiegłych latach dzięki Waszej pomocy Marysia m.in.:**
 - przeszła operację biodra,
@@ -41,7 +41,7 @@ W 100% na **leczenie, rehabilitację i sprzęt wspierający rozwój i samodzieln
 ---
 
 ### Gdzie rehabilituje się Marysia?
-W **Neuroneo** (https://neuroneo.pl/) — Centrum Rehabilitacji Neurologicznej założonym przez **lek. Adriannę Wywiał**, mamę Marysi. Jej osobiste doświadczenie stało się fundamentem miejsca, w którym Marysia i inne dzieci mogą otrzymać celowaną terapię neurologiczną.
+W **Neuroneo** (https://neuroneo.pl/) - Centrum Rehabilitacji Neurologicznej założonym przez **lek. Adriannę Wywiał**, mamę Marysi. Jej osobiste doświadczenie stało się fundamentem miejsca, w którym Marysia i inne dzieci mogą otrzymać celowaną terapię neurologiczną.
 
 ---
 
@@ -54,7 +54,7 @@ https://www.facebook.com/MarysiaNaPrzekorDiagnozom/
 ## 1,5% podatku (PIT)
 
 ### Czy przekazanie 1,5% podatku coś kosztuje?
-Nie. To nie jest darowizna “z kieszeni” — tylko wskazanie, do kogo ma trafić część podatku wynikającego z Twojego rozliczenia.
+Nie. To nie jest darowizna “z kieszeni” - tylko wskazanie, do kogo ma trafić część podatku wynikającego z Twojego rozliczenia.
 
 ---
 
@@ -71,27 +71,27 @@ Kliknij **Dodaj/Zmień**, wpisz KRS i cel szczegółowy, zapisz, a następnie za
 
 ---
 
-### Co jeśli już zaakceptowałem Twój e-PIT bez 1,5% — czy da się to poprawić?
-Tak — przez **korektę zeznania**. Złóż korektę, uzupełniając sekcję 1,5% (KRS + cel).  
+### Co jeśli już zaakceptowałem Twój e-PIT bez 1,5% - czy da się to poprawić?
+Tak - przez **korektę zeznania**. Złóż korektę, uzupełniając sekcję 1,5% (KRS + cel).  
 Ważne: żeby zmiana 1,5% była skuteczna, korektę trzeba złożyć **najpóźniej w ciągu miesiąca po ustawowym terminie złożenia PIT**.
 
 ---
 
 ### Czy mogę przekazać 1,5% przy wspólnym rozliczeniu z małżonkiem?
-Tak. Wspólne rozliczenie ma normalnie sekcję 1,5% — wpisujesz jeden KRS i cel szczegółowy dla całego zeznania.
+Tak. Wspólne rozliczenie ma normalnie sekcję 1,5% - wpisujesz jeden KRS i cel szczegółowy dla całego zeznania.
 
 ---
 
 ### Jak to zrobić, jeśli rozliczam PIT-28 / PIT-36 / PIT-36L?
-W każdym z tych formularzy jest część typu **„Wniosek o przekazanie 1,5% na OPP”** — wpisujesz **KRS** i **cel szczegółowy**.  
-Uwaga praktyczna: w Twój e-PIT **PIT-37 i PIT-38** mogą się automatycznie zaakceptować, ale **PIT-28, PIT-36 i PIT-36L nie** — trzeba je uzupełnić i wysłać samodzielnie.
+W każdym z tych formularzy jest część typu **„Wniosek o przekazanie 1,5% na OPP”** - wpisujesz **KRS** i **cel szczegółowy**.  
+Uwaga praktyczna: w Twój e-PIT **PIT-37 i PIT-38** mogą się automatycznie zaakceptować, ale **PIT-28, PIT-36 i PIT-36L nie** - trzeba je uzupełnić i wysłać samodzielnie.
 
 ---
 
-### Co jeśli mam 0 podatku do zapłaty albo pełną ulgę — czy 1,5% zadziała?
+### Co jeśli mam 0 podatku do zapłaty albo pełną ulgę - czy 1,5% zadziała?
 1,5% liczy się od **podatku należnego**.  
-- Jeśli podatek należny wynosi 0 — nie ma z czego przekazać 1,5%.  
-- Jeśli masz zwrot (nadpłatę), często nadal istnieje podatek należny (tylko był pobrany w trakcie roku) — wtedy 1,5% zwykle działa normalnie.
+- Jeśli podatek należny wynosi 0 - nie ma z czego przekazać 1,5%.  
+- Jeśli masz zwrot (nadpłatę), często nadal istnieje podatek należny (tylko był pobrany w trakcie roku) - wtedy 1,5% zwykle działa normalnie.
 
 ---
 
@@ -136,12 +136,12 @@ Najprościej jest wysłać w **PLN**, ale przelew zagraniczny może iść też w
 ---
 
 ### Czy jest możliwość wpłaty online (BLIK/karta), jeśli nie chcę robić przelewu?
-Tak — na stronie fundacji jest możliwość wpłaty online przez **Przelewy24**. W bramce płatniczej zobaczysz dostępne metody (w zależności od banku i ustawień).
+Tak - na stronie fundacji jest możliwość wpłaty online przez **Przelewy24**. W bramce płatniczej zobaczysz dostępne metody (w zależności od banku i ustawień).
 
 ---
 
 ### Czy mogę ustawić wpłatę cykliczną?
-Tak — ustaw w swoim banku **zlecenie stałe** na konto fundacji i zawsze wpisuj w tytule:  
+Tak - ustaw w swoim banku **zlecenie stałe** na konto fundacji i zawsze wpisuj w tytule:  
 **1884 pomoc dla Marysi Wywiał**
 
 ---
