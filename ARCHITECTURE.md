@@ -20,8 +20,9 @@ Polish mobile-first landing page redesigned with a warm, credible aesthetic. All
 - **Hero** (`#` / `.hero`): Two-column layout (photo + content) on desktop, stacked on mobile. Two-line H1 ("1,5% dla Marysi. W PIT to chwila, dla niej codzienna pomoc."), short third-person intro focused on Marysia's character and what 1,5% changes in practice, restored trust pill ("To nic nie kosztuje..."), primary CTA "Przejdź do danych do PIT" scrolling to the donation card.
 - **Donation Card** (`#dane-do-pit` / `.pit-data`): Prominent card with coral border. KRS and cel szczegółowy with copy buttons. Clear instruction copy, trust line explaining that 1,5% goes to Marysia's subaccount, filing window date, link to Marysia's foundation subaccount.
 - **How-to Steps** (`#jak-przekazac` / `.how-to`): Three numbered steps (Twój e-PIT login, KRS entry, cel szczegółowy entry) with inline copy buttons. Deadline badge and short note for accountant/software-based filings.
-- **Story** (`#historia` / `.story`): Two-column grid (text + photos). Short third-person introduction to Marysia covering her personality, brief diagnosis context (skrajne wcześniactwo, czterokończynowe mózgowe porażenie dziecięce, padaczka), daily rehabilitation, and what the funds support. Top spacing after the hero was reduced to keep this section visually closer to the first CTA. Photos: `terapia.jpg` (therapy session) and `hero2.jpg` (reading at home).
-- **Photo Gallery** (`#galeria` / `.gallery`): 12-photo gallery titled "Marysia po swojemu" with refreshed figcaptions that highlight personality and daily moments rather than placeholder chronology labels.
+- **Story** (`#historia` / `.story`): Two-column grid (text + photos). Short third-person introduction to Marysia covering her personality, brief diagnosis context (skrajne wcześniactwo, czterokończynowe mózgowe porażenie dziecięce, padaczka), daily rehabilitation, and what the funds support. Top spacing after the hero was reduced to keep this section visually closer to the first CTA. Photos: `marysia-wozek.jpg` (wheelchair photo outdoors) and `hero2.jpg` (reading at home).
+- **Media mentions** (`#w-mediach` / `.media`): Homepage ticker of linked media logos under the heading "Marysia w mediach". The previous descriptive subheader was removed to keep the section tighter and more label-like.
+- **Photo Gallery** (`#galeria` / `.gallery`): 12-photo gallery titled "Marysia po swojemu" with refreshed figcaptions that highlight personality and daily moments rather than placeholder chronology labels. The rehabilitation tile now reuses `terapia.jpg` from the earlier story section and is captioned "Codzienna rehabilitacja".
 - **FAQ** (`#faq` / `.faq`): Five practical `<details>` items under the heading "FAQ bez komplikacji", focused on cost, exact PIT data, what the support covers, deadline, and passing data to an accountant. FAQPage JSON-LD structured data included in `<head>` mirrors these practical questions.
 - **Bank Transfer** (`#przelew` / `.bank`): Landing page section with PLN account number and transfer title, framed as additional support beyond 1,5%.
 - **Updates** (`#aktualnosci` / `.updates`): Direct Facebook profile CTA with final copy encouraging readers to follow Marysia's day-to-day progress. No embedded widgets.
@@ -53,8 +54,8 @@ CSS custom properties define a consistent design system:
 16 authentic photos of Marysia used across the site:
 - `hero1.jpg` — hero photo (Marysia smiling in nature, used in hero section + OG image)
 - `hero2.jpg` — reading at home (used in story section)
-- `terapia.jpg` — therapy session with therapist (used in story section)
-- `terapia2.jpg`, `wczesniak.jpg`, `wczesniak2.jpg`, `usmiech-mala.jpg`, `christmas.jpg`, `mala_mis.jpg`, `szpital-operacja.jpg`, `gra_na_pianinie.jpg`, `zabawa.jpg`, `uczy_sie.jpg`, `ksiezniczka.jpg`, `wozek_smieje_sie.jpg` — used in gallery section
+- `marysia-wozek.jpg` — Marysia in her wheelchair outdoors (used as the first photo in the story section)
+- `terapia.jpg`, `terapia2.jpg`, `wczesniak.jpg`, `wczesniak2.jpg`, `usmiech-mala.jpg`, `christmas.jpg`, `mala_mis.jpg`, `szpital-operacja.jpg`, `gra_na_pianinie.jpg`, `zabawa.jpg`, `uczy_sie.jpg`, `ksiezniczka.jpg`, `wozek_smieje_sie.jpg` — available photo assets; `terapia.jpg` is now used in the gallery section
 - `wozek.jpg` — available but not currently used on page
 
 ### 6) SEO infrastructure
