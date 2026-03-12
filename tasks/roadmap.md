@@ -196,6 +196,27 @@ Tasks are grouped into phases. Within a phase, tasks can often run in parallel.
 - **Depends on:** 005, 007, 008, 009, 014
 - **Acceptance:** Copy is Polish, natural, personal, and aligned with the 1,5% PIT goal; automated checks pass
 
+### 027 — Update story and gallery photo placement ✅
+- **File:** `tasks/027-update-story-gallery-photo.md`
+- **Scope:** Swap the first "Poznaj Marysię" image with the newly provided wheelchair photo and move the previous story image into the gallery.
+- **Delivers:**
+  - `docs/assets/marysia-wozek.jpg` added from the provided source photo
+  - First image in "Poznaj Marysię" updated to the new asset with revised alt text
+  - Gallery tile previously captioned "Ćwiczenia z sensem" updated to use the old story image and the caption "Codzienna rehabilitacja"
+  - Smoke test assertion covering the swapped image and updated caption
+- **Depends on:** 008, 020
+- **Acceptance:** Homepage shows the new story photo, the gallery reflects the moved image and new caption, and automated checks pass
+
+### 028 — Update media section heading ✅
+- **File:** `tasks/028-update-media-heading.md`
+- **Scope:** Rename the homepage media section heading and remove the supporting subheader copy.
+- **Delivers:**
+  - Media section heading updated from "O Marysi pisały także" to "Marysia w mediach"
+  - Supporting subheader under the media heading removed
+  - Smoke test assertion covering the updated heading and removed copy
+- **Depends on:** 026
+- **Acceptance:** Homepage shows the new media heading, the old supporting sentence is gone, and automated checks pass
+
 ---
 
 ## Phase 2 — Secondary pages and accountant pack

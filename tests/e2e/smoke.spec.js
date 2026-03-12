@@ -19,7 +19,7 @@ test.describe("Homepage smoke", () => {
     await expect(
       page.getByRole("heading", {
         level: 1,
-        name: "1,5% dla Marysi. W PIT to chwila, dla niej codzienna pomoc.",
+        name: /Przekaż 1,5% podatku dla Marysi na przekór jej diagnozom/i,
       })
     ).toBeVisible();
   });
@@ -28,6 +28,21 @@ test.describe("Homepage smoke", () => {
     await page.goto("/");
 
     await expect(page.getByTestId("hero-image")).toBeVisible();
+    await expect(page.getByTestId("story-primary-image")).toHaveAttribute(
+      "src",
+      "assets/marysia-wozek.jpg"
+    );
+    await expect(page.getByTestId("gallery-rehab-image")).toHaveAttribute(
+      "src",
+      "assets/terapia.jpg"
+    );
+    await expect(page.getByText("Codzienna rehabilitacja")).toBeVisible();
+    await expect(page.getByRole("heading", { level: 2, name: "Marysia w mediach" })).toBeVisible();
+    await expect(
+      page.getByText(
+        "Jej historia porusza, ale najważniejsze dzieje się każdego dnia: w terapii, nauce i małych wielkich krokach."
+      )
+    ).toHaveCount(0);
     await expect(page.getByTestId("copy-krs")).toBeVisible();
     await expect(page.getByTestId("copy-cel")).toBeVisible();
     await expect(page.getByTestId("cta-to-pit")).toBeVisible();
