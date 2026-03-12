@@ -12,7 +12,7 @@
       // Deactivate all
       tabBtns.forEach(function (b) {
         b.setAttribute("aria-selected", "false");
-        b.classList.remove("tab-btn--active");
+        b.classList.remove("tab-btn-active");
       });
       tabPanels.forEach(function (p) {
         p.hidden = true;
@@ -21,7 +21,7 @@
 
       // Activate selected
       btn.setAttribute("aria-selected", "true");
-      btn.classList.add("tab-btn--active");
+      btn.classList.add("tab-btn-active");
       var panel = document.getElementById(targetId);
       if (panel) {
         panel.hidden = false;
@@ -44,7 +44,7 @@
 
     progressItems.forEach(function (item) {
       var matches = item.getAttribute("data-targets") === id;
-      item.classList.toggle("progress-item--active", matches);
+      item.classList.toggle("progress-item-active", matches);
     });
   }
 

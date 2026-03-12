@@ -15,11 +15,11 @@ test.describe("Homepage smoke", () => {
 
     expect(response).not.toBeNull();
     expect(response.ok()).toBeTruthy();
-    await expect(page).toHaveTitle(/1,5% podatku.*Marysia Wywiał/i);
+    await expect(page).toHaveTitle(/1,5% dla Marysi/i);
     await expect(
       page.getByRole("heading", {
         level: 1,
-        name: "Przekaż 1,5% podatku dla Marysi Wywiał",
+        name: "1,5% dla Marysi. W PIT to chwila, dla niej codzienna pomoc.",
       })
     ).toBeVisible();
   });
@@ -59,5 +59,19 @@ test.describe("Homepage smoke", () => {
     await page.goto("/");
 
     expect(runtimeErrors).toEqual([]);
+  });
+
+  test("faq page loads with updated title and heading", async ({ page }) => {
+    const response = await page.goto("/docs/faq.html");
+
+    expect(response).not.toBeNull();
+    expect(response.ok()).toBeTruthy();
+    await expect(page).toHaveTitle(/FAQ dla Marysi/i);
+    await expect(
+      page.getByRole("heading", {
+        level: 1,
+        name: "FAQ dla tych, którzy chcą pomóc Marysi",
+      })
+    ).toBeVisible();
   });
 });

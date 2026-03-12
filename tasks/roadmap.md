@@ -186,6 +186,16 @@ Tasks are grouped into phases. Within a phase, tasks can often run in parallel.
 - **Depends on:** 009 (FAQPage JSON-LD already in place)
 - **Acceptance:** JSON-LD validates with Google Rich Results Test
 
+### 026 — Final Polish landing and FAQ copy ✅
+- **File:** `tasks/026-final-polish-copy.md`
+- **Scope:** Replace temporary landing page and FAQ text with final Polish copy, keeping `docs/historia.html` content unchanged.
+- **Delivers:**
+  - Final hero, CTA, section headings, gallery captions, trust copy, metadata, and footer text on the landing page
+  - Finalized full FAQ copy with clearer categories, practical tax guidance, and more natural tone
+  - Smoke test coverage extended to the FAQ page
+- **Depends on:** 005, 007, 008, 009, 014
+- **Acceptance:** Copy is Polish, natural, personal, and aligned with the 1,5% PIT goal; automated checks pass
+
 ---
 
 ## Phase 2 — Secondary pages and accountant pack

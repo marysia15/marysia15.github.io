@@ -3,27 +3,28 @@
 ## Scope
 Static GitHub Pages site for Marysia 1.5% PIT campaign. No backend, no build pipeline.
 
-## Current implementation status (as of 2026-03-02)
+## Current implementation status (as of 2026-03-12)
 
 ### 1) Website runtime
 - Hosting model: static files served from `docs/` via GitHub Pages.
 - Main published content is in `docs/`.
 - `docs/index.html` is the canonical single-page landing (all sections on one page).
-- `docs/faq.html` is a dedicated FAQ page with all questions organized by category (general, 1.5% PIT, donations, foundation). The landing page shows 5 curated questions and links here for the full FAQ.
+- `docs/faq.html` is a dedicated FAQ page with all questions organized by category (quick start, 1.5% PIT, additional support, foundation). The landing page shows 5 curated questions and links here for the full FAQ.
+- `docs/historia.html` keeps the long-form story content intact; only technical cleanup of class names/formatting was applied to keep quality checks green.
 - Root `index.html` currently redirects to `./docs/` — **should be removed** once GitHub Pages source is set to `/docs` folder (see deployment note below).
 
 ### 2) Homepage (`docs/index.html`) — full single-page landing
 Polish mobile-first landing page redesigned with a warm, credible aesthetic. All sections live on one page:
 
-- **Navigation** (`<nav class="site-nav">`): Sticky top bar with brand text and anchor links (Dane do PIT, Jak przekazać, O Marysi, FAQ). Desktop-only nav links; brand always visible.
-- **Hero** (`#` / `.hero`): Two-column layout (photo + content) on desktop, stacked on mobile. H1, intro paragraph (mama's voice), trust line ("To nic nie kosztuje"), primary CTA scrolling to donation card.
-- **Donation Card** (`#dane-do-pit` / `.pit-data`): Prominent card with coral border. KRS and cel szczegółowy with copy buttons. Trust badge ("100% wpłat trafia na subkonto"), filing window date, link to foundation subaccount.
-- **How-to Steps** (`#jak-przekazac` / `.how-to`): Three numbered steps (e-PIT login, KRS entry, cel szczegółowy entry) with inline copy buttons. Filing deadline badge. Alternative methods note.
-- **Story** (`#historia` / `.story`): Two-column grid (text + photos). Real story text in Adrianna's (mama) voice — 5 paragraphs covering Marysia's premature birth, personality, rehabilitation needs, and how funds are used. Signed by Adrianna. Photos: `terapia.jpg` (therapy session) and `hero2.jpg` (reading at home).
-- **Photo Gallery** (`#galeria` / `.gallery`): Chronological 12-photo gallery titled "Marysia na przekór diagnozom". Responsive grid (2-col mobile, 3-col desktop). Each photo has a figcaption. Uses 12 of 16 available photos covering Marysia's journey from NICU to present day.
-- **FAQ** (`#faq` / `.faq`): Five `<details>` accordion items (curated selection from full FAQ) with "Przeczytaj więcej..." link to dedicated FAQ page. FAQPage JSON-LD structured data included in `<head>` covers these 5 questions.
-- **Bank Transfer** (`#przelew` / `.bank`): PLN account placeholder with copy button. Placeholder for IBAN/SWIFT for foreign transfers.
-- **Updates** (`#aktualnosci` / `.updates`): Placeholder for curated Facebook post links. No embedded widgets.
+- **Navigation** (`<nav class="site-nav">`): Sticky top bar with a short brand label (`Dla Marysi`) and anchor links (Dane do PIT, Jak przekazać 1.5%, Poznaj Marysię, FAQ). Desktop-only nav links; brand always visible.
+- **Hero** (`#` / `.hero`): Two-column layout (photo + content) on desktop, stacked on mobile. Two-line H1 ("1,5% dla Marysi. W PIT to chwila, dla niej codzienna pomoc."), short third-person intro focused on Marysia's character and what 1,5% changes in practice, restored trust pill ("To nic nie kosztuje..."), primary CTA "Przejdź do danych do PIT" scrolling to the donation card.
+- **Donation Card** (`#dane-do-pit` / `.pit-data`): Prominent card with coral border. KRS and cel szczegółowy with copy buttons. Clear instruction copy, trust line explaining that 1,5% goes to Marysia's subaccount, filing window date, link to Marysia's foundation subaccount.
+- **How-to Steps** (`#jak-przekazac` / `.how-to`): Three numbered steps (Twój e-PIT login, KRS entry, cel szczegółowy entry) with inline copy buttons. Deadline badge and short note for accountant/software-based filings.
+- **Story** (`#historia` / `.story`): Two-column grid (text + photos). Short third-person introduction to Marysia covering her personality, brief diagnosis context (skrajne wcześniactwo, czterokończynowe mózgowe porażenie dziecięce, padaczka), daily rehabilitation, and what the funds support. Top spacing after the hero was reduced to keep this section visually closer to the first CTA. Photos: `terapia.jpg` (therapy session) and `hero2.jpg` (reading at home).
+- **Photo Gallery** (`#galeria` / `.gallery`): 12-photo gallery titled "Marysia po swojemu" with refreshed figcaptions that highlight personality and daily moments rather than placeholder chronology labels.
+- **FAQ** (`#faq` / `.faq`): Five practical `<details>` items under the heading "FAQ bez komplikacji", focused on cost, exact PIT data, what the support covers, deadline, and passing data to an accountant. FAQPage JSON-LD structured data included in `<head>` mirrors these practical questions.
+- **Bank Transfer** (`#przelew` / `.bank`): Landing page section with PLN account number and transfer title, framed as additional support beyond 1,5%.
+- **Updates** (`#aktualnosci` / `.updates`): Direct Facebook profile CTA with final copy encouraging readers to follow Marysia's day-to-day progress. No embedded widgets.
 - **Footer** (`.site-footer`): Foundation name, KRS repeat, OPP status, footer navigation links, copyright.
 - **Sticky Mobile CTA** (`.sticky-cta`): Fixed bottom bar on mobile (<640px) with "Kopiuj KRS" button. Hides via IntersectionObserver when donation card is visible.
 
@@ -74,12 +75,13 @@ CSS custom properties define a consistent design system:
   - Homepage load, title, H1
   - Key CTA and copy controls presence
   - Hero CTA scrolls to PIT data card
+  - FAQ page load, title, and H1
   - No runtime console/page errors
-- All 5 tests passing.
+- All 6 tests passing.
 
 ### 9) Task/contracts workflow
 - Task contracts stored in `tasks/`.
-- Completed tasks: 001–004 (Phase 0), 005–014 (Phase 1 core — see roadmap.md).
+- Completed tasks include 001–004 (Phase 0), 005–014 (Phase 1 core), and 026 (final Polish landing + FAQ copy refresh).
 
 ## Deployment note
 GitHub Pages should be configured to serve from the `/docs` folder on the `main` branch. This eliminates the `/docs` URL slug and makes `marysia15.github.io` serve `docs/index.html` directly. Once configured, the root `index.html` redirect file can be deleted.
