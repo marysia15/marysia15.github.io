@@ -89,4 +89,24 @@ test.describe("Homepage smoke", () => {
       })
     ).toBeVisible();
   });
+
+  test("historia CTA navigates to the homepage how-to section", async ({ page }) => {
+    const response = await page.goto("/docs/historia.html");
+
+    expect(response).not.toBeNull();
+    expect(response.ok()).toBeTruthy();
+
+    await page.getByRole("link", { name: "Jak przekazać 1,5% - 3 kroki" }).click();
+
+    await expect(page).toHaveURL(/\/docs\/#jak-przekazac$/);
+    await expect(
+      page.getByRole("heading", { level: 2, name: "Jak przekazać 1,5% dla Marysi?" })
+    ).toBeVisible();
+
+    const targetOffset = await page.locator("#jak-przekazac").evaluate(function (element) {
+      return Math.abs(element.getBoundingClientRect().top);
+    });
+
+    expect(targetOffset).toBeLessThan(24);
+  });
 });

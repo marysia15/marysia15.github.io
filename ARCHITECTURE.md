@@ -11,6 +11,7 @@ Static GitHub Pages site for Marysia 1.5% PIT campaign. No backend, no build pip
 - `docs/index.html` is the canonical single-page landing (all sections on one page).
 - `docs/faq.html` is a dedicated FAQ page with all questions organized by category (quick start, 1.5% PIT, additional support, foundation). The landing page shows 5 curated questions and links here for the full FAQ.
 - `docs/historia.html` keeps the long-form story content intact; only technical cleanup of class names/formatting was applied to keep quality checks green.
+- `docs/historia.html` homepage-return links use root-relative `./#...` anchors so the CTA and nav land on the correct sections in both local preview and published GitHub Pages routing.
 - Root `index.html` currently redirects to `./docs/` — **should be removed** once GitHub Pages source is set to `/docs` folder (see deployment note below).
 
 ### 2) Homepage (`docs/index.html`) — full single-page landing
@@ -49,6 +50,10 @@ CSS custom properties define a consistent design system:
 ### 4) Client-side JavaScript (`docs/js/copy.js`)
 - Copy-to-clipboard via `navigator.clipboard.writeText()` with "Skopiowano!" visual feedback
 - Sticky CTA visibility toggle via IntersectionObserver (hides when donation card is in viewport)
+
+### 4a) Client-side includes (`docs/js/includes.js`)
+- Homepage sections marked with `data-include` are fetched client-side from `docs/components/`.
+- Hash navigation is restored after async include and asset loading so direct links like `/#jak-przekazac` land on the correct visible section instead of being displaced by late-loaded content above the target.
 
 ### 5) Static assets (`docs/assets/`)
 16 authentic photos of Marysia used across the site:

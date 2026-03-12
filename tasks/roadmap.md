@@ -217,6 +217,16 @@ Tasks are grouped into phases. Within a phase, tasks can often run in parallel.
 - **Depends on:** 026
 - **Acceptance:** Homepage shows the new media heading, the old supporting sentence is gone, and automated checks pass
 
+### 029 — Fix historia homepage anchor links ✅
+- **File:** `tasks/029-fix-historia-home-anchor.md`
+- **Scope:** Update the landing-page links in `docs/historia.html` so the CTA and nav resolve to the correct homepage sections.
+- **Delivers:**
+  - Story CTA "Jak przekazać 1,5% - 3 kroki" links to the landing page how-to section
+  - Historia nav/footer homepage links use the published `./#...` route form
+  - Smoke coverage asserts the CTA reaches `#jak-przekazac`
+- **Depends on:** 013, 026
+- **Acceptance:** Clicking the CTA from `/historia.html` lands on the homepage `Jak przekazać 1,5% dla Marysi?` section
+
 ---
 
 ## Phase 2 — Secondary pages and accountant pack
