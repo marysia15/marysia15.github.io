@@ -47,6 +47,10 @@ test.describe("Homepage smoke", () => {
     await expect(page.getByTestId("copy-cel")).toBeVisible();
     await expect(page.getByTestId("cta-to-pit")).toBeVisible();
     await expect(page.getByTestId("cta-foundation")).toBeVisible();
+    await expect(page.getByTestId("accountant-pdf-link")).toHaveAttribute(
+      "href",
+      "pit-dla-marysi-dla-ksiegowych-final.pdf"
+    );
   });
 
   test("hero CTA navigates to PIT data card", async ({ page }) => {
@@ -88,6 +92,10 @@ test.describe("Homepage smoke", () => {
         name: "FAQ dla tych, którzy chcą pomóc Marysi",
       })
     ).toBeVisible();
+    await expect(page.getByTestId("faq-accountant-pdf-link")).toHaveAttribute(
+      "href",
+      "pit-dla-marysi-dla-ksiegowych-final.pdf"
+    );
   });
 
   test("historia CTA navigates to the homepage how-to section", async ({ page }) => {

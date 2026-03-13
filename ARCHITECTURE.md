@@ -3,13 +3,13 @@
 ## Scope
 Static GitHub Pages site for Marysia 1.5% PIT campaign. No backend, no build pipeline.
 
-## Current implementation status (as of 2026-03-12)
+## Current implementation status (as of 2026-03-13)
 
 ### 1) Website runtime
 - Hosting model: static files served from `docs/` via GitHub Pages.
 - Main published content is in `docs/`.
 - `docs/index.html` is the canonical single-page landing (all sections on one page).
-- `docs/faq.html` is a dedicated FAQ page with all questions organized by category (quick start, 1.5% PIT, additional support, foundation). The landing page shows 5 curated questions and links here for the full FAQ.
+- `docs/faq.html` is a dedicated FAQ page with all questions organized by category (quick start, 1.5% PIT, additional support, foundation). The landing page shows 5 curated questions and links here for the full FAQ. The accountant quick-start answer includes a direct link to the published accountant PDF.
 - `docs/historia.html` keeps the long-form story content intact; only technical cleanup of class names/formatting was applied to keep quality checks green.
 - `docs/historia.html` homepage-return links use root-relative `./#...` anchors so the CTA and nav land on the correct sections in both local preview and published GitHub Pages routing.
 - Root `index.html` currently redirects to `./docs/` — **should be removed** once GitHub Pages source is set to `/docs` folder (see deployment note below).
@@ -20,11 +20,11 @@ Polish mobile-first landing page redesigned with a warm, credible aesthetic. All
 - **Navigation** (`<nav class="site-nav">`): Sticky top bar with a short brand label (`Dla Marysi`) and anchor links (Dane do PIT, Jak przekazać 1.5%, Poznaj Marysię, FAQ). Desktop-only nav links; brand always visible.
 - **Hero** (`#` / `.hero`): Two-column layout (photo + content) on desktop, stacked on mobile. Two-line H1 ("1,5% dla Marysi. W PIT to chwila, dla niej codzienna pomoc."), short third-person intro focused on Marysia's character and what 1,5% changes in practice, restored trust pill ("To nic nie kosztuje..."), primary CTA "Przejdź do danych do PIT" scrolling to the donation card.
 - **Donation Card** (`#dane-do-pit` / `.pit-data`): Prominent card with coral border. KRS and cel szczegółowy with copy buttons. Clear instruction copy, trust line explaining that 1,5% goes to Marysia's subaccount, filing window date, link to Marysia's foundation subaccount.
-- **How-to Steps** (`#jak-przekazac` / `.how-to`): Three numbered steps (Twój e-PIT login, KRS entry, cel szczegółowy entry) with inline copy buttons. Deadline badge and short note for accountant/software-based filings.
+- **How-to Steps** (`#jak-przekazac` / `.how-to`): Three numbered steps (Twój e-PIT login, KRS entry, cel szczegółowy entry) with inline copy buttons. Deadline badge, short note for accountant/software-based filings, and a direct download link to the accountant PDF (`pit-dla-marysi-dla-ksiegowych-final.pdf`).
 - **Story** (`#historia` / `.story`): Two-column grid (text + photos). Short third-person introduction to Marysia covering her personality, brief diagnosis context (skrajne wcześniactwo, czterokończynowe mózgowe porażenie dziecięce, padaczka), daily rehabilitation, and what the funds support. Top spacing after the hero was reduced to keep this section visually closer to the first CTA. Photos: `marysia-wozek.jpg` (wheelchair photo outdoors) and `hero2.jpg` (reading at home).
 - **Media mentions** (`#w-mediach` / `.media`): Homepage ticker of linked media logos under the heading "Marysia w mediach". The previous descriptive subheader was removed to keep the section tighter and more label-like.
 - **Photo Gallery** (`#galeria` / `.gallery`): 12-photo gallery titled "Marysia po swojemu" with refreshed figcaptions that highlight personality and daily moments rather than placeholder chronology labels. The rehabilitation tile now reuses `terapia.jpg` from the earlier story section and is captioned "Codzienna rehabilitacja".
-- **FAQ** (`#faq` / `.faq`): Five practical `<details>` items under the heading "FAQ bez komplikacji", focused on cost, exact PIT data, what the support covers, deadline, and passing data to an accountant. FAQPage JSON-LD structured data included in `<head>` mirrors these practical questions.
+- **FAQ** (`#faq` / `.faq`): Five practical `<details>` items under the heading "FAQ bez komplikacji", focused on cost, exact PIT data, what the support covers, deadline, and passing data to an accountant. The accountant question includes the same direct PDF download link as the how-to section. FAQPage JSON-LD structured data included in `<head>` mirrors these practical questions.
 - **Bank Transfer** (`#przelew` / `.bank`): Landing page section with PLN account number and transfer title, framed as additional support beyond 1,5%.
 - **Updates** (`#aktualnosci` / `.updates`): Direct Facebook profile CTA with final copy encouraging readers to follow Marysia's day-to-day progress. No embedded widgets.
 - **Footer** (`.site-footer`): Foundation name, KRS repeat, OPP status, footer navigation links, copyright.
@@ -62,6 +62,7 @@ CSS custom properties define a consistent design system:
 - `marysia-wozek.jpg` — Marysia in her wheelchair outdoors (used as the first photo in the story section)
 - `terapia.jpg`, `terapia2.jpg`, `wczesniak.jpg`, `wczesniak2.jpg`, `usmiech-mala.jpg`, `christmas.jpg`, `mala_mis.jpg`, `szpital-operacja.jpg`, `gra_na_pianinie.jpg`, `zabawa.jpg`, `uczy_sie.jpg`, `ksiezniczka.jpg`, `wozek_smieje_sie.jpg` — available photo assets; `terapia.jpg` is now used in the gallery section
 - `wozek.jpg` — available but not currently used on page
+- `pit-dla-marysi-dla-ksiegowych-final.pdf` — published accountant instruction PDF linked from the homepage how-to section and FAQ
 
 ### 6) SEO infrastructure
 - `docs/robots.txt` exists and references sitemap.
@@ -80,10 +81,11 @@ CSS custom properties define a consistent design system:
   - Root response behavior (redirect shell)
   - Homepage load, title, H1
   - Key CTA and copy controls presence
+  - Accountant PDF links on homepage and FAQ page
   - Hero CTA scrolls to PIT data card
   - FAQ page load, title, and H1
   - No runtime console/page errors
-- All 6 tests passing.
+- All smoke tests passing.
 
 ### 9) Task/contracts workflow
 - Task contracts stored in `tasks/`.

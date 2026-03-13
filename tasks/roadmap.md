@@ -218,6 +218,17 @@ Tasks are grouped into phases. Within a phase, tasks can often run in parallel.
 - **Acceptance:** Homepage shows the new media heading, the old supporting sentence is gone, and automated checks pass
 
 ### 029 — Fix historia homepage anchor links ✅
+
+### 030 — Add accountant PDF download links ✅
+- **File:** `tasks/030-add-accountant-pdf-links.md`
+- **Scope:** Add direct PDF download links for accountants on the homepage and in the FAQ, and publish the PDF from `docs/`.
+- **Delivers:**
+  - Homepage link under "Jak przekazać 1,5% dla Marysi?" with the text "Pobierz PDF z instrukcjami dla księgowych"
+  - Matching link in the FAQ question about sending data to an accountant
+  - Published PDF file at `docs/pit-dla-marysi-dla-ksiegowych-final.pdf`
+  - Smoke test coverage for both links
+- **Depends on:** 007, 009, 026
+- **Acceptance:** Both pages show a working download link that points to the published PDF, and automated checks pass
 - **File:** `tasks/029-fix-historia-home-anchor.md`
 - **Scope:** Update the landing-page links in `docs/historia.html` so the CTA and nav resolve to the correct homepage sections.
 - **Delivers:**

@@ -91,3 +91,4 @@ After every completed task, before committing:
 ## Learnings (concise)
 - Validate from the same working directory you document (`pwd` + server command), otherwise local behavior can be misread.
 - Before debugging app code, verify port ownership (`lsof ...`) to avoid chasing a stale server process.
+- Downloadable files for the published site must live under `docs/`; files kept only at repo root are not served by GitHub Pages.
