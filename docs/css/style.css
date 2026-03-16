@@ -666,7 +666,7 @@ img {
 
 .media-ticker {
   overflow: hidden;
-  padding: 1.5rem 0;
+  padding: 2.5rem 0;
   background: var(--bg-alt);
   border-top: 1px solid var(--border-light);
   border-bottom: 1px solid var(--border-light);
@@ -678,7 +678,7 @@ img {
 .media-ticker-track {
   display: flex;
   align-items: center;
-  gap: 3rem;
+  gap: 4rem;
   width: max-content;
   animation: media-scroll 28s linear infinite;
 }
@@ -718,7 +718,7 @@ img {
 }
 
 .media-logo {
-  width: 220px;
+  width: 300px;
   height: auto;
   display: block;
 }
